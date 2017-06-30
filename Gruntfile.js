@@ -224,6 +224,7 @@ module.exports = function (grunt) {
                     '!<%= yeoman.dist %>/images/menu/**/*.{png,jpg,jpeg,gif,webp,svg}',
                     '!<%= yeoman.dist %>/images/favicons/**/*.{png,jpg,jpeg,gif,webp,svg}',
                     '!<%= yeoman.dist %>/images/ogimage.png',
+                    '!<%= yeoman.dist %>/images/socials/ico_ifood.svg',
                     '!<%= yeoman.dist %>/images/uis/ic_*.svg',
                     '!<%= yeoman.dist %>/images/uis/back*.svg',
                     '!<%= yeoman.dist %>/images/contact/*.svg',
