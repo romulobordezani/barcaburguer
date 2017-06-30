@@ -5,7 +5,7 @@ set -x
 
 # setup ssh agent, git config and remote
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/travis_barca_rsa.pub
+ssh-add ~/.ssh/travis_barca_rsa
 git remote add deploy "travis_barca@barcaburguer.com.br:/var/www/barcaburguer.com.br"
 git config user.name "travis_barca"
 git config user.email "romulobordezani@gmail.com"
