@@ -8,8 +8,8 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
     # setup ssh agent, git config and remote
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/travis_rsa
-    git remote add deploy "travis@barcaburguer.com.br:/var/www/barcaburguer.com.br"
-    git config user.name "travis"
+    git remote add deploy "travis_barca@barcaburguer.com.br:/var/www/barcaburguer.com.br"
+    git config user.name "travis_barca"
     git config user.email "romulobordezani@gmail.com"
 
     rm -f .gitignore
