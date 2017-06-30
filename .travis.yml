@@ -9,7 +9,7 @@ branches:
   - staging
 before_install:
 - openssl aes-256-cbc -K $encrypted_a701ea690b7a_key -iv $encrypted_a701ea690b7a_iv
-  -in .travis/travis_barca_rsa.enc -out travis_barca_rsa -d
+  -in .travis/travis_barca_rsa.enc -out ~/.ssh/travis_barca_rsa -d
 - chmod 600 ~/.ssh/travis_barca_rsa
 - rvm install 2.2.2
 before_script:
