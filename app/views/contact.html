@@ -1,0 +1,45 @@
+<div id="contact" layout="column" class="md-padding" >
+
+    <form name="contactForm" ng-submit="sendEmail()" novalidate autocomplete="off" >
+
+        <div layout="row" layout-wrap >
+
+            <div layout="column" flex >
+
+                <h5 flex class="md-title" >Contato</h5>
+
+                <md-input-container class="md-icon-float" >
+                    <label>Nome</label>
+                    <md-icon md-svg-src="images/contact/ic_person_24px.svg" class="name" ></md-icon>
+                    <input ng-model="user.name" type="text">
+                </md-input-container>
+
+                <md-input-container class="md-icon-float" >
+                    <md-icon md-svg-src="images/contact/ic_phone_24px.svg"></md-icon>
+                    <input ng-model="user.phone" type="tel" placeholder="Telefone"  >
+                </md-input-container>
+
+                <md-input-container class="md-icon-float" >
+                    <md-icon md-svg-src="images/contact/ic_email_24px.svg" class="email"></md-icon>
+                    <input ng-model="user.email" type="email" placeholder="E-mail (obrigatório)" ng-required="true" >
+                </md-input-container>
+
+                <md-input-container flex >
+                    <label>Mensagem( obrigatório )</label>
+                    <textarea ng-model="user.message" columns="1" ng-required="true" md-maxlength="150" ></textarea>
+                </md-input-container>
+
+            </div>
+
+
+        </div>
+
+        <div layout="row" layout-wrap layout-align="end center" >
+            <md-button class="md-raised md-accent md-hue-2" type="submit" ng-disabled="!contactForm.$valid" >
+                Enviar <md-icon md-svg-src="images/uis/ic_paper_plane_24px.svg"></md-icon>
+            </md-button>
+        </div>
+
+    </form>
+
+</div>

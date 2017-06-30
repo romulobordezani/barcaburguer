@@ -1,0 +1,355 @@
+md-toolbar {
+
+    min-width: 320px;
+
+    &#header {
+
+        color:$black;
+        background-color: $bg-black;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        z-index: 50;
+
+        div#menu-row{
+
+            #social-links{
+
+                width: 260px;
+                float: right;
+                margin: 0px;
+                position: absolute;
+                right: 7px;
+
+                div {
+
+                    float: right;
+                    width: 23px;
+                    margin: 18px 7px 0;
+
+                    a{
+
+                        display:block;
+                        width: 100%;
+
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+            #menu-splitter{
+
+                display: block;
+                content:' ';
+                background: transparent url('../images/uis/vertical-sppliter.svg') repeat left center;
+                background-size: 1px 31px;
+                height: 31px;
+                width: 1px;
+                margin-top: 16px;
+                float: right;
+
+            }
+
+            button.menuBtn {
+
+                border: none;
+                outline: none;
+                width: 70px;
+                outline: none;
+                background: transparent url('../images/uis/ic_menu_black_24px.svg') no-repeat center center;
+
+            }
+
+            h1.md-toolbar-tools {
+
+                letter-spacing: 2px!important;
+                max-width: 400px;
+
+                a {
+
+                    outline: none;
+                    color: $black;
+                    cursor: pointer;
+
+                    &:link, &:visited, &:hover{
+                        color: $black;
+                    }
+
+                    img {
+
+                        width: 70px;
+                        height: auto;
+                        margin: 3px 7px 0px 0px;
+                        float: left;
+
+                        @media ( min-width : $flex-md ){
+
+                            margin: 10px 7px 0 9px;
+                            width: 100px;
+
+                        }
+
+                        &.spin-blow{
+                            -webkit-animation: spin 1.5s ease-out;
+                            -o-animation: spin 1.5s ease-out;
+                            animation: spin 1.5s ease-out;
+                        }
+
+                    }
+
+                    span {
+
+                        float: left;
+                        margin: 6px 9px 0 0;
+                        font-size: 17px;
+
+                        @media ( max-width : 360px ){
+                            margin: 11px 0 0 8px;
+                            font-size: 16px;
+                        }
+
+                        @media ( min-width : 361px ){
+                            margin: 8px 0 0 8px;
+                            font-size: 17px;
+                        }
+
+                        @media ( min-width : $flex-md ){
+                            margin: 20px 7px 0 0;
+                            font-size: 17px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        div#timeline-row{
+
+            div {
+
+                md-slider {
+
+                    .md-slider-wrapper{
+
+                        .md-thumb-container{
+
+                            .md-thumb{
+
+                                &::after {
+                                    background-color: $black;
+                                    border-color: $black;
+                                }
+
+                                .md-focus-thumb{
+                                    color: $black;
+                                }
+
+                            }
+
+                            .md-sign{
+
+                                &::after {
+                                    border-top-color: $black;
+                                }
+
+                                background-color: $black;
+
+                                .md-thumb-text{
+                                    font-size: 9px;
+                                    color:$white;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .md-thumb-label {
+
+                    font-size: 16px;
+                    min-width: 56px;
+                    padding: 0 7px;
+
+                    @media (min-width: $flex-md){
+                        font-size: 19px;
+                    }
+
+                    @media (min-width: $flex-lg){
+                        font-size: 21px;
+                    }
+
+                }
+
+
+            }
+
+        }
+
+        div#background-row{
+            display:none;
+        }
+
+    }
+
+}
+
+&.home {
+
+    md-toolbar {
+
+        &#header {
+
+            background-color: transparent;
+            position: fixed !important;
+            box-shadow: none;
+
+            -webkit-transition: all .7s;
+            -moz-transition: all .7s;
+            -ms-transition: all .7s;
+            -o-transition: all .7s;
+            transition: all .7s;
+
+            -webkit-transition-delay: .7s;
+            -moz-transition-delay: .7s;
+            -ms-transition-delay: .7s;
+            -o-transition-delay: .7s;
+            transition-delay: .7s;
+
+            div#menu-row {
+
+                position: absolute;
+                z-index: 200;
+                width: 100%;
+                right: 0;
+
+            }
+
+            div#background-row {
+                background: $white none repeat scroll 0 0;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+                display: block;
+            }
+
+        }
+
+    }
+
+}
+
+md-sidenav{
+
+    md-list {
+
+        padding: 0px;
+        height: 99.5%;
+        width: 100%;
+        position: absolute;
+
+        md-item {
+
+            height: 25%;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+            .md-button {
+
+                color: inherit;
+                font-weight: 500;
+                text-align: left;
+                width: 100%;
+                border-radius: 0px;
+                margin: 0px;
+                height: 100%;
+                padding-left: 15px;
+
+                &.md-focused.md-default-theme:not([disabled]) {
+                    background-color: transparent;
+                }
+
+                .md-item-container {
+
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-left: 30px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        float: left;
+
+                        &.ifood{
+                            width: 110px;
+                        }
+                    }
+
+
+
+                    .md-list-item-text {
+                        float: left;
+                        margin: 18px 0 0 0;
+                        font-size: 20px;
+                    }
+
+                }
+
+            }
+
+            .md-button.selected {
+                background-color: rgba(158, 158, 158, 0.33);
+            }
+
+            #social-links-menu{
+
+                width: 270px;
+                float: right;
+                margin-right: 5px;
+
+                @media (max-width: $flex-md){
+                    margin-top:10px;
+                }
+
+                div {
+
+                    float: right;
+                    width: 23px;
+                    margin: 20px 10px 0;
+
+                    a{
+
+                        display:block;
+                        width: 100%;
+
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
