@@ -58,29 +58,3 @@ $use-fadeIn : true;
 
 }
 
-
-
-
-
-/** Work Switcher  Animation **/
-.work-switcher-animation{
-
-    &.ng-enter {
-        -moz-transition:    max-height .3s ease-out, opacity .3s ease-in;
-        -webkit-transition: max-height .3s ease-out, opacity .3s ease-in;
-        -o-transition:      max-height .3s ease-out, opacity .3s ease-in;
-        transition:         max-height .3s ease-out, opacity .3s ease-in;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        max-height: 0;
-        opacity: 0;
-    }
-
-    &.ng-enter.ng-enter-active {
-        max-height: 100px;
-        opacity:1;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-}

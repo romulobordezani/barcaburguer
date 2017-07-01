@@ -18,7 +18,9 @@ body {
     md-content#ngview-container{
 
         div#ngview {
+            @import 'views/home';
             @import 'views/contact';
+            @import 'views/cardapio';
         }
 
         @import 'assets/footer';
@@ -29,3 +31,4 @@ body {
 
 @import 'libs/materialExtensions';
 @import 'libs/content_pusher';
+@import 'libs/clickable.directive';

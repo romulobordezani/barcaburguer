@@ -378,8 +378,8 @@
 
         </md-toolbar>
 
-        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="leftMenu"   >
-            <md-list layout="column" layout-align="space-around right"    >
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="leftMenu" >
+            <md-list layout="column" layout-align="space-around right" >
 
                 <md-item ng-repeat="item in leftMenuList"  >
                     <md-button ng-click="menuClick(item, $event)" target="{{item.target}}" ng-class="{'selected' : item === selected }" md-swipe-left="swipeLeftMenu()" >
@@ -447,6 +447,7 @@
             <script src="scripts/providers/utils.provider.js"></script>
 
 
+            <script src="scripts/directives/clickable.directive.js"></script>
             <script src="scripts/directives/parallax.directive.js"></script>
 
             <script src="scripts/config/config.constants.js"></script>

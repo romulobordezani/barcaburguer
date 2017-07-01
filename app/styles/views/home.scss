@@ -1,0 +1,82 @@
+#home{
+    margin: 20px;
+}
+
+md-card {
+
+    max-height: none;
+    min-width: 47%;
+    cursor: pointer;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &.no-pointer{
+        cursor: default;
+    }
+
+    @media (max-width:$flex-sm){
+        margin-bottom: 56px!important;
+    }
+
+    @media (min-width:$flex-md){
+        min-width: 46%;
+    }
+
+    @media (min-width:$flex-lg){
+        min-width: 20%;
+    }
+
+    .md-card-image{
+
+
+        -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+        -webkit-user-select: none;
+        -ms-user-select: none; /* From IE10 only */
+        user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+        -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+        user-drag: none;
+        pointer-events: none;
+
+        img {
+
+
+            -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+            -webkit-user-select: none;
+            -ms-user-select: none; /* From IE10 only */
+            user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+            -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+            user-drag: none;
+            pointer-events: none;
+            touch-action: none;
+
+        }
+
+    }
+
+    md-card-content {
+
+        p{
+            -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+            -webkit-user-select: none;
+            -ms-user-select: none; /* From IE10 only */
+            user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+            -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+            user-drag: none;
+
+            pointer-events: none;
+
+        }
+
+    }
+
+    .md-toolbar-tools {
+        background: $discret-black;
+        color:$white;
+        font-size: 0.9em;
+    }
+
+}

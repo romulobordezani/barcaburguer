@@ -11,7 +11,8 @@ angular
         'ngMessages',
         'mdParallax',
         'angularytics',
-        'plangular'
+        'plangular',
+        'addClassOnClick'
     ])
 
     .config(
@@ -23,6 +24,12 @@ angular
                     controller: 'homeController',
                     animation: 'fade',
                     showFooter : true
+                })
+
+                .when('/acai', {
+                    templateUrl: 'views/acai.html',
+                    controller: 'homeController',
+                    animation: 'fade'
                 })
 
 

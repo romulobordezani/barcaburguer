@@ -47,7 +47,7 @@ md-toolbar {
                 display: block;
                 content:' ';
                 background: transparent url('../images/uis/vertical-sppliter.svg') repeat left center;
-                background-size: 1px 31px;
+                background-size: 2px 31px;
                 height: 31px;
                 width: 1px;
                 margin-top: 16px;
@@ -88,10 +88,8 @@ md-toolbar {
                         float: left;
 
                         @media ( min-width : $flex-md ){
-
-                            margin: 10px 7px 0 9px;
-                            width: 100px;
-
+                            margin: 13px 7px 0 9px;
+                            width: 90px;
                         }
 
                         &.spin-blow{
@@ -131,123 +129,6 @@ md-toolbar {
 
         }
 
-        div#timeline-row{
-
-            div {
-
-                md-slider {
-
-                    .md-slider-wrapper{
-
-                        .md-thumb-container{
-
-                            .md-thumb{
-
-                                &::after {
-                                    background-color: $black;
-                                    border-color: $black;
-                                }
-
-                                .md-focus-thumb{
-                                    color: $black;
-                                }
-
-                            }
-
-                            .md-sign{
-
-                                &::after {
-                                    border-top-color: $black;
-                                }
-
-                                background-color: $black;
-
-                                .md-thumb-text{
-                                    font-size: 9px;
-                                    color:$white;
-                                }
-
-                            }
-
-                        }
-
-                    }
-
-                }
-
-                .md-thumb-label {
-
-                    font-size: 16px;
-                    min-width: 56px;
-                    padding: 0 7px;
-
-                    @media (min-width: $flex-md){
-                        font-size: 19px;
-                    }
-
-                    @media (min-width: $flex-lg){
-                        font-size: 21px;
-                    }
-
-                }
-
-
-            }
-
-        }
-
-        div#background-row{
-            display:none;
-        }
-
-    }
-
-}
-
-&.home {
-
-    md-toolbar {
-
-        &#header {
-
-            background-color: transparent;
-            position: fixed !important;
-            box-shadow: none;
-
-            -webkit-transition: all .7s;
-            -moz-transition: all .7s;
-            -ms-transition: all .7s;
-            -o-transition: all .7s;
-            transition: all .7s;
-
-            -webkit-transition-delay: .7s;
-            -moz-transition-delay: .7s;
-            -ms-transition-delay: .7s;
-            -o-transition-delay: .7s;
-            transition-delay: .7s;
-
-            div#menu-row {
-
-                position: absolute;
-                z-index: 200;
-                width: 100%;
-                right: 0;
-
-            }
-
-            div#background-row {
-                background: $white none repeat scroll 0 0;
-                height: 100%;
-                left: 0;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 100%;
-                z-index: 0;
-                display: block;
-            }
-
-        }
 
     }
 
