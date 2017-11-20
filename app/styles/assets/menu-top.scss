@@ -22,8 +22,11 @@ md-toolbar {
                 div {
 
                     float: right;
-                    width: 23px;
-                    margin: 18px 7px 0;
+                    margin: 12px 7px 0;
+
+                    @media (max-width:$flex-sm){
+                        margin: 9px 7px 0;
+                    }
 
                     a{
 
@@ -37,6 +40,14 @@ md-toolbar {
 
                     }
 
+                }
+
+                .fb-page{
+                    width: 26px;
+                    margin-top: 18px;
+                    @media (max-width:$flex-sm){
+                        margin-top: 15px;
+                    }
                 }
 
             }
@@ -82,7 +93,7 @@ md-toolbar {
 
                     img {
 
-                        width: 70px;
+                        width: 90px;
                         height: auto;
                         margin: 3px 7px 0px 0px;
                         float: left;

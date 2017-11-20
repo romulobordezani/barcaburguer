@@ -10,41 +10,38 @@ div#contact {
         -webkit-margin-after: 1em;
     }
 
-    #social-contacts{
+    a{
+        width:190px;
+        font-size: 20px;
+        line-height: 36px;
+        padding: 13px;
+        background: #555555;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        text-align: center;
 
-        div {
-
-            float: right;
-            width: 23px;
-            margin: 20px 7px 0;
-
-            &.linkedin{
-                margin: 18px 5px 0 7px;
-            }
-
-            a{
-
-                display:block;
-                width: 100%;
-
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-
-            }
-
+        img{
+            max-width: 26px;
+            float:left;
+            margin: 5px 10px 0 6px;
         }
 
+        &:hover{
+            background: grey;
+            color: black;
+        }
     }
 
-    md-input-container.md-default-theme label, md-input-container.md-default-theme .md-placeholder{
-        color: #333333;
+    .ifood{
+        img{
+            max-width: 63px;
+        }
     }
 
-    button.md-raised{
-        max-width: 66px;
+    .spaced{
+        @media (max-width:$flex-sm){
+            margin-top: 30px!important;
+        }
     }
-
 
 }

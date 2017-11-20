@@ -11,7 +11,6 @@ angular.module('rbApp')
     .controller('appController', ['$scope', '$mdSidenav','leftMenuService', '$location', '$rootScope', '$timeout', 'CONFIG',
         function( $scope, $mdSidenav, leftMenuService, $location, $rootScope, $timeout, CONFIG ){
 
-
             var menu = {
 
                 init : function(){
@@ -87,7 +86,8 @@ angular.module('rbApp')
 
                 $rootScope.$on('$routeChangeStart', function(event, currRoute /* , prevRoute */ ){
                     $scope.animation = currRoute.animation || 'fade';
-                    $scope.showFooter = currRoute.showFooter || false;
+                    $rootScope.hideFooter = currRoute.hideFooter || false;
+                    $rootScope.$applyAsync();
                 });
 
                 $rootScope.$on('forceAnimationSet', function(event, args) {

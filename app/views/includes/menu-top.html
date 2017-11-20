@@ -13,23 +13,12 @@
         </h1>
 
         <div id="social-links" class="noselect" >
-            <div><a ng-href="https://www.facebook.com/abarcaburguer" target="_BLANK" ><img src="images/socials/ico_facebook.svg"  /></a></div>
+            <div hide-sm hide-xs class="fb-like" data-href="https://www.facebook.com/abarcaburguer" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <div hide-md hide-gt-md class="fb-like" data-href="https://www.facebook.com/abarcaburguer" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+            <div class="fb-page"><a ng-href="https://www.facebook.com/abarcaburguer" target="_BLANK" ><img src="images/socials/ico_facebook.svg"  /></a></div>
         </div>
 
     </div>
-
-    <div id="timeline-row" ng-if="workSwitcherVisibility" class="work-switcher-animation" >
-
-        <div layout style="margin: 0 15px 15px;" >
-            <div flex="10" flex-xs="15" layout layout-align="center center" >
-                <span class="md-thumb-label" ng-bind="yearSlider" ></span>
-            </div>
-            <md-slider flex  class="md-primary md-hue-7" md-discrete ng-model="$parent.yearSlider" step="1" min="{{ FIRST_YEAR }}" max="{{ LAST_YEAR }}" aria-label="rating" ></md-slider>
-        </div>
-
-    </div>
-
-    <div id="background-row" class="md-whiteframe-z1" md-parallax parallax-init-val="0" parallax-ratio="2" parallax-css="opacity"  parallax-scroller="ngview-container" ></div>
 
 </md-toolbar>
 

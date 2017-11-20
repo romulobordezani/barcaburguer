@@ -22,8 +22,7 @@ angular
                 .when('/', {
                     templateUrl: 'views/home.html',
                     controller: 'homeController',
-                    animation: 'fade',
-                    showFooter : true
+                    animation: 'fade'
                 })
 
                 .when('/acai', {
@@ -36,7 +35,8 @@ angular
                 .when('/contato', {
                     templateUrl: 'views/contact.html',
                     controller: 'contactController',
-                    animation: 'fade'
+                    animation: 'fade',
+                    hideFooter : true
                 })
 
                 .when('/cardapio', {
@@ -68,6 +68,7 @@ angular
 
         Angularytics.init();
 
+        $rootScope.date = new Date();
 
         $timeout( function(){
             var spinnerParent = document.getElementById('rb-body');
