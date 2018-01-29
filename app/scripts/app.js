@@ -46,6 +46,12 @@ angular
                 })
 
 
+                .when('/regulamento', {
+                    templateUrl: 'views/regulamento.html',
+                    controller: 'homeController',
+                    animation: 'fade'
+                })
+
                 .otherwise({
                     redirectTo: '/',
                     animation: 'fade'
