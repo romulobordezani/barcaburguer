@@ -83,7 +83,7 @@ angular
         }, 3000);
 
 
-        $rootScope.$on('$routeChangeSuccess', function () {
+        $rootScope.$on('$routeChangeSuccess', function() {
             Animator.scrollTo(document.getElementById('ngview-container'), 0, 500);
         });
 
