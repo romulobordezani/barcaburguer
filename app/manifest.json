@@ -16,7 +16,7 @@
       "type": "image/png"
     },
     {
-      "src": "barcaburguer/images/favicons/android-chrome-512x512.png",
+      "src": "images/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
