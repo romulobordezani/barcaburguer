@@ -1,6 +1,6 @@
 {
-  "short_name": "Barca Burguer",
-  "name": "BarcaBurguer",
+  "short_name": "BarcaBurguer",
+  "name": "Barca Burguer",
   "description": "Barca Burguer - Açaí e Hamburguer a preço justo.",
   "dir": "rtl",
   "lang": "pt-BR",
@@ -21,7 +21,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/barcaburguer/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#333333"
