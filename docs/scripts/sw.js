@@ -2,12 +2,12 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('v1').then(function(cache) {
             return cache.addAll([
-                '/',
-                'index.html',
-                '/styles/main.d03b7e5e.css',
-                '/styles/vendor.99529543.css',
-                '/scripts/scripts.9d4cdac8.js',
-                '/scripts/vendor.b6673da8.js'
+                '/barcaburguer/',
+                '/barcaburguer/index.html',
+                '/barcaburguer/styles/main.d03b7e5e.css',
+                '/barcaburguer/styles/vendor.99529543.css',
+                '/barcaburguer/scripts/scripts.9d4cdac8.js',
+                '/barcaburguer/scripts/vendor.b6673da8.js'
             ]);
         })
     );
