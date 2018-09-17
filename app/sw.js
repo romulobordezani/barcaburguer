@@ -17,6 +17,11 @@ self.addEventListener('fetch', function(event) {
             return response;
         } else {
             return fetch(event.request).then(function (response) {
+
+                if(!(event.request.url.indexOf('http') === 0)){
+                    return response;
+                }
+
                 // response may be used only once
                 // we need to save clone to put one copy in cache
                 // and serve second one
