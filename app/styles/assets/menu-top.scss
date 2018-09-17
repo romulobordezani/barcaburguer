@@ -149,8 +149,8 @@ md-sidenav{
 
     md-list {
 
-        padding: 0px;
-        height: 99.5%;
+        padding: 0;
+        height: 95%;
         width: 100%;
         position: absolute;
 
@@ -165,8 +165,8 @@ md-sidenav{
                 font-weight: 500;
                 text-align: left;
                 width: 100%;
-                border-radius: 0px;
-                margin: 0px;
+                border-radius: 0;
+                margin: 0;
                 height: 100%;
                 padding-left: 15px;
 
@@ -185,13 +185,10 @@ md-sidenav{
                         width: 50px;
                         height: 50px;
                         float: left;
-
                         &.ifood{
                             width: 110px;
                         }
                     }
-
-
 
                     .md-list-item-text {
                         float: left;
@@ -205,39 +202,6 @@ md-sidenav{
 
             .md-button.selected {
                 background-color: rgba(158, 158, 158, 0.33);
-            }
-
-            #social-links-menu{
-
-                width: 270px;
-                float: right;
-                margin-right: 5px;
-
-                @media (max-width: $flex-md){
-                    margin-top:10px;
-                }
-
-                div {
-
-                    float: right;
-                    width: 23px;
-                    margin: 20px 10px 0;
-
-                    a{
-
-                        display:block;
-                        width: 100%;
-
-                        img{
-                            width: 100%;
-                            height: auto;
-                        }
-
-                    }
-
-
-                }
-
             }
 
         }

@@ -20,8 +20,22 @@ angular.module('rbApp')
 
                 setListeners : function(){
 
+                    $mdSidenav('leftMenu').onClose(function () {
+                        $location.search({ menu: null });
+                    });
+
                     $scope.toggleSidenav = function(menuId) {
-                        $mdSidenav(menuId).toggle();
+
+                        $mdSidenav(menuId).toggle().then(function() {
+
+                            if ($mdSidenav(menuId).isOpen()) {
+                                $location.search({ menu: 'opened' });
+                            } else {
+                                $location.search({ menu: null });
+                            }
+
+                        });
+
                     };
 
                     $scope.menuClick = function( menuItem, e ) {

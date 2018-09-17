@@ -70,7 +70,7 @@ angular
         }
 
 ).run(
-    function ( $rootScope, $timeout, $templateCache, $http, Angularytics, Animator, CONFIG ) {
+    function ( $rootScope, $timeout, $templateCache, $http, Angularytics, Animator, CONFIG, $mdSidenav, $location ) {
 
         Angularytics.init();
 
@@ -83,13 +83,29 @@ angular
         }, 3000);
 
 
-        $rootScope.$on('$routeChangeSuccess', function() {
+        $rootScope.$on('$routeChangeSuccess', function(evt, params) {
+            var route = params.$$route.originalPath,
+                viewport = document.querySelector("meta[name=viewport]");
+
+            if (route === '/cardapio' || route === '/acai') {
+                viewport.setAttribute('content', 'width=device-width, user-scalable=yes');
+            } else {
+                viewport.setAttribute('content', 'width=device-width, user-scalable=no');
+            }
+
+            if ($location.search().menu !== 'opened' ) {
+                $mdSidenav('leftMenu').close();
+            }
+
             Animator.scrollTo(document.getElementById('ngview-container'), 0, 500);
+
         });
 
 
         $http.get('views/contact.html', { cache: $templateCache }).then(function(){
-
+            $http.get('views/cardapio.html', { cache: $templateCache }).then(function(){
+                $http.get('views/acai.html', { cache: $templateCache }).then(function(){});
+            });
         });
 
         var signature = [
@@ -105,8 +121,19 @@ angular
 
         ].join('\r\n');
 
-
         console.log('%c'+signature, 'font-size: 11px; color: #333333; background: #F6F6F6; ');
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('scripts/sw.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
 
     }
 );
