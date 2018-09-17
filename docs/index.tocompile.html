@@ -242,4 +242,14 @@
                     transform: scale(1, 1);
                     opacity: .25;
                 }
-            }</style>  <body id="rb-body" layout="column" ng-controller="appController" ng-class="[animation, routeclass]"> include "facebook-sdk.html" include "browse-happy.html" include "pre-loader.html" include "menu-top.html" include "ng-view.html" <div id="dependency-injector"> <script src="scripts/vendor.b6673da8.js"></script> <script src="scripts/scripts.9d4cdac8.js"></script> </div>  
+            }</style>  <body id="rb-body" layout="column" ng-controller="appController" ng-class="[animation, routeclass]"> include "facebook-sdk.html" include "browse-happy.html" include "pre-loader.html" include "menu-top.html" include "ng-view.html" <div id="dependency-injector"> <script src="scripts/vendor.b6673da8.js"></script> <script src="scripts/scripts.926c726c.js"></script> </div> <script>if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('sw.js').then(function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }).catch(function(err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }</script>  
