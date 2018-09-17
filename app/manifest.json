@@ -16,12 +16,12 @@
       "type": "image/png"
     },
     {
-      "src": "images/favicons/android-chrome-512x512.png",
+      "src": "barcaburguer/images/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/barcaburguer/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#333333"

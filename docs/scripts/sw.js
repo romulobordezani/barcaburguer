@@ -4,10 +4,10 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
                 '/',
                 'index.html',
-                '/styles/main.d03b7e5e.css',
-                '/styles/vendor.99529543.css',
-                '/scripts/scripts.9d4cdac8.js',
-                '/scripts/vendor.b6673da8.js'
+                '/styles/main.xxxx.css',
+                '/styles/vendor.xxxx.css',
+                '/scripts/scripts.xxxx.js',
+                '/scripts/vendor.xxxx.js'
             ]);
         })
     );

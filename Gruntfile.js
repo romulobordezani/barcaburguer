@@ -149,6 +149,7 @@ module.exports = function (grunt) {
                     src: [
                         '.tmp',
                         '<%= yeoman.dist %>/{,*/}*',
+                        'docs/{,*/}*',
                         '!<%= yeoman.dist %>/.git{,*/}*'
                     ]
                 }]
@@ -341,6 +342,7 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'manifest.json',
+                        'CNAME',
                         '*.html',
                         'views/**/*.html',
                         'images/**/*.**',
@@ -357,6 +359,18 @@ module.exports = function (grunt) {
                     cwd: '.',
                     src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
                     dest: '<%= yeoman.dist %>'
+                }]
+            },
+
+            docs: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.dist %>',
+                    dest: 'docs',
+                    src: [
+                        '**'
+                    ]
                 }]
             },
 
@@ -465,7 +479,8 @@ module.exports = function (grunt) {
         'filerev',
         'usemin',
         'includes:dist',
-        'htmlmin'
+        'htmlmin',
+        'copy:docs'
     ]);
 
     grunt.registerTask('default', [
