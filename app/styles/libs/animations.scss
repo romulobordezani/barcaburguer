@@ -10,17 +10,17 @@ $use-fadeIn : true;
 
 .fade .view.ng-leave {
 
-    -webkit-animation-name: fadeOut;
-    -moz-animation-name: fadeOut;
-    -ms-animation-name: fadeOut;
-    -o-animation-name: fadeOut;
-    animation-name: fadeOut;
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -ms-animation-duration: 0.5s;
-    -o-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    position:absolute;
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  position:absolute;
 
 }
 
@@ -35,22 +35,20 @@ $use-fadeIn : true;
 
 .fade .view.ng-enter {
 
-    -webkit-animation-name: fadeIn;
-    -moz-animation-name: fadeIn;
-    -ms-animation-name: fadeIn;
-    -o-animation-name: fadeIn;
-    animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
 
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -ms-animation-duration: 0.5s;
-    -o-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 

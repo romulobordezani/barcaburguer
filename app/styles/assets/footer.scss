@@ -2,37 +2,36 @@
 @import '../libs/measures';
 
 footer{
+  md-toolbar#footer{
 
-    md-toolbar#footer{
+    background: $black;
+    color: $white;
+    font-size: 11px;
+    -webkit-box-shadow: -1px 1px 8px 1px rgba(0,0,0,0);
+    box-shadow: -1px 1px 8px 1px rgb(0, 0, 0);
 
-        background: $black;
-        color: $white;
-        font-size: 11px;
-        -webkit-box-shadow: -1px 1px 8px 1px rgba(0,0,0,0);
-        box-shadow: -1px 1px 8px 1px rgb(0, 0, 0);
+    a{
+      line-height: 26px;
+      font-size: 14px;
+    }
 
-        a{
-            line-height: 26px;
-            font-size: 14px;
-        }
+    .footer-left{
 
-        .footer-left{
+      margin-left: 25px;
 
-            margin-left: 25px;
+      @media(max-width:$flex-md){
+        margin-left: 0px;
+      }
 
-            @media(max-width:$flex-md){
-                margin-left: 0px;
-            }
-
-            img{
-                max-width: 26px;
-                float:left;
-                margin-right: 6px;
-            }
-
-        }
+      img{
+        max-width: 26px;
+        float:left;
+        margin-right: 6px;
+      }
 
     }
+
+  }
 
 
 }

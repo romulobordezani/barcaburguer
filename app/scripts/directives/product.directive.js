@@ -1,0 +1,40 @@
+'use strict';
+angular.module('productDirective', []).directive('product', [ 'Utils', '$timeout',
+     function (Utils, $timeout) {
+        return {
+            restrict: 'E',
+
+            scope: {
+              title: '@',
+              type: '@',
+              itemData: '=',
+              containerClass: '@'
+            },
+
+            transclude: true,
+
+            template: `
+              <md-list class="{{ 'product ' + containerClass }}">
+                <md-subheader class="md-no-sticky">{{ title }}</md-subheader>
+                <div layout="column" layout-lg="row" layout-gt-lg="row" layout-align="start start" layout-wrap>
+                  <md-list-item flex flex-lg="50" flex-gt-lg="50"  class="md-2-line" ng-repeat="item in itemData | orderBy:'order' | filter: showFilter" ng-click="null">
+                    <img ng-if="item.images[0]" class="md-avatar" ng-src="{{item.images[0]}}"  />
+                    <div ng-if="!item.images[0]" class="md-avatar-spacer">&nbsp</div>
+                    <div class="md-list-item-text">
+                      <h3 class="name">{{item.name}}</h3>
+                      <p class="description">{{item.description}}</p>
+                      <p class="price" ng-show="item.price">R$ {{item.price.toFixed(2)}}</p>
+                    </div>
+                  </md-list-item>
+                </div>
+              </md-list>`,
+
+            link: function(scope, element, attrs) {
+              scope.showFilter = function(item){
+                return item.show;
+              };
+            }
+        };
+
+     }
+]);
