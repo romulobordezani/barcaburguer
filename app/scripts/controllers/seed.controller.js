@@ -16,6 +16,20 @@ angular.module('rbApp')
       const collection = db.collection("hotdogs");
 
       const productList = [
+
+        {
+          extraEspecial: {
+            name: 'Hot dog Extra especial',
+            description: '2 salsichas, bacon, milho, ervilha, catchup, maionese temperada, barbecue, catupiry, cheddar, purê e batata palha.',
+            price: 12.50,
+            order: 1,
+            images: [
+              '/images/cardapio/hotdogs/hotdog-especial.png'
+            ],
+            show: true
+          }
+        },
+
         {
           simples: {
             name: 'Hot dog simples',
@@ -262,6 +276,19 @@ angular.module('rbApp')
       const productList = [
 
         {
+          acai500: {
+            name: 'Açaí',
+            description: 'Açaí 500ml + 2 acompanhamentos. Acompanha: leite condensado + 2 acompanhamentos',
+            price: 12,
+            order: 1,
+            images: [
+              '/images/cardapio/acai/acai350.png'
+            ],
+            show: true
+          }
+        },
+
+        {
           acai350: {
             name: 'Açaí',
             description: 'Açaí 350ml + 2 acompanhamentos. Acompanha: leite condensado + 2 acompanhamentos',
@@ -282,6 +309,19 @@ angular.module('rbApp')
             order: 2,
             images: [
               '/images/cardapio/acai/acai700.png'
+            ],
+            show: true
+          }
+        },
+
+        {
+          barcaP: {
+            name: 'Barca de açaí ( p ) com 6 acompanhamentos',
+            description: 'Barca de açaí ( g ) com 6 acompanhamentos + leite condensado.',
+            price: 40,
+            order: 3,
+            images: [
+              '/images/cardapio/acai/barcaG.png'
             ],
             show: true
           }
@@ -795,13 +835,16 @@ angular.module('rbApp')
       });
     }
 
-    addHamburgers();
-    addAcai();
-    addAcaiComplementos();
-    addAcaiComplementosExtra();
-    addHotDogs();
-    addBeverages();
-    addTapiocas();
-    addPorcoes();
-    addSobremesas();
+
+   /*
+     addHotDogs();
+     addHamburgers();
+     addAcai();
+     addAcaiComplementos();
+      addAcaiComplementosExtra();
+      addHotDogs();
+      addBeverages();
+      addTapiocas();
+      addPorcoes();
+      addSobremesas();*/
   });
