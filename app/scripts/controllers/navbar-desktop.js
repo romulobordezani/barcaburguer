@@ -12,7 +12,7 @@ angular.module('rbApp')
 
 
     function getCurrentLinkFromRoute(route) {
-      let currentPath = route.$$route.originalPath;
+      var currentPath = route.$$route.originalPath;
 
       if (currentPath === '/') {
         return 'inicio';

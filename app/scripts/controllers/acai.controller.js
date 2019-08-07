@@ -18,22 +18,22 @@ angular.module('rbApp')
 
       const db = firebase.firestore();
 
-      db.collection("acai_complementos").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
+      db.collection("acai_complementos").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
           $scope.acai_complementos.push(doc.data());
         });
         $scope.$apply();
       });
 
-      db.collection("acai_complementos_extra").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
+      db.collection("acai_complementos_extra").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
           $scope.acai_complementos_extra.push(doc.data());
         });
         $scope.$apply();
       });
 
-      db.collection("acai").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
+      db.collection("acai").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
           $scope.acai.push(doc.data());
         });
         $scope.$apply();

@@ -1,12 +1,13 @@
+/*
 'use strict';
 
-/**
+/!**
  * @ngdoc function
  * @name rbApp.controller:seedController
  * @description
  * # SeedCtrl
  * Controller of the rbApp
- */
+ *!/
 angular.module('rbApp')
   .controller('seedController', function (){
 
@@ -836,7 +837,7 @@ angular.module('rbApp')
     }
 
 
-   /*
+   /!*
      addHotDogs();
      addHamburgers();
      addAcai();
@@ -846,5 +847,6 @@ angular.module('rbApp')
       addBeverages();
       addTapiocas();
       addPorcoes();
-      addSobremesas();*/
+      addSobremesas();*!/
   });
+*/
