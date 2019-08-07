@@ -219,7 +219,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                    '!<%= yeoman.dist %>/sw.js',
+                    '!<%= yeoman.dist %>/sw_v2.js',
                     '<%= yeoman.dist %>/styles/{,*/}*.css',
                     '<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
                     '!<%= yeoman.dist %>/images/menu/**/*.{png,jpg,jpeg,gif,webp,svg}',
@@ -317,7 +317,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '.tmp/concat/scripts',
-                    src: ['*.js', '!oldieshim.js', '!sw.js'],
+                    src: ['*.js', '!oldieshim.js', '!sw_v2.js'],
                     dest: '.tmp/concat/scripts'
                 }]
             }
@@ -348,7 +348,7 @@ module.exports = function (grunt) {
                         'views/**/*.html',
                         'images/**/*.**',
                         'fonts/{,*/}*.*',
-                        'sw.js',
+                        'sw_v2.js',
                     ]
                 }, {
                     expand: true,
