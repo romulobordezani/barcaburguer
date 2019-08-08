@@ -19,8 +19,44 @@ var walk = function(dir, done) {
           });
         }
         else {
-          file = file.replace('/home/ubuntu/workspace/public', '');
-          results.push(file);
+          var shouldAdd = true;
+          file = file.replace('/Users/romulobordezani/Documents/workspace/barcaburguer/docs', '');
+
+          var blackList = [
+            '/.htaccess',
+            '/404.html',
+            '/CNAME',
+            '/favicon.ico',
+            '/index.html',
+            '/sw_v2.js',
+            '/index.tocompile.html',
+            '/listFiles.js',
+            '/manifest.json',
+            '/robots.txt',
+            '/views/includes/browse-happy.html',
+            '/views/includes/facebook-sdk.html',
+            '/views/includes/footer.html',
+            '/views/includes/menu-top-desktop.html',
+            '/views/includes/menu-top-mobile.html',
+            '/views/includes/ng-view.html',
+            '/views/includes/pre-loader.html',
+          ];
+
+          const isBlackListed = blackList.some(element => element === file);
+
+          if (isBlackListed) {
+            shouldAdd = false;
+          }
+
+          if (file.indexOf('.DS_Store') !== -1) {
+            shouldAdd = false;
+          }
+
+          if (shouldAdd) {
+            results.push(file);
+          }
+
+
           next();
         }
       });

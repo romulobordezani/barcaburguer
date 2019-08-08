@@ -80,8 +80,6 @@ self.addEventListener('install', function(event) {
         '/images/home/destaque_cardapio.6a0ff034.jpg',
         '/images/home/destaque_chapa_quente.a96b465d.jpg',
         '/images/home/destaque_ifood.e3b2e844.jpg',
-        '/images/home/kids.c2fafce3.jpg',
-        '/images/home/logo-ml.2e2da351.png',
         '/images/home/post2.231d0ce0.jpg',
         '/images/home/post3.0882097e.jpg',
         '/images/home/post4.11996280.jpg',

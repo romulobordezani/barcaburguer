@@ -349,13 +349,16 @@ module.exports = function (grunt) {
                         'images/**/*.**',
                         'fonts/{,*/}*.*',
                         'sw_v2.js',
+                        'listFiles.js',
                     ]
-                }, {
+                },
+                {
                     expand: true,
                     cwd: '.tmp/images',
                     dest: '<%= yeoman.dist %>/images',
                     src: ['generated/*']
-                }, {
+                },
+                {
                     expand: true,
                     cwd: '.',
                     src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',

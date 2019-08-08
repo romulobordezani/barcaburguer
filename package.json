@@ -53,6 +53,7 @@
   "scripts": {
     "start": "grunt serve --force",
     "test": "grunt test",
-    "build": "grunt build"
+    "build": "grunt build",
+    "list": "node ./docs/listFiles.js"
   }
 }
