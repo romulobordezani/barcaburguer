@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v2').then(function(cache) {
       return cache.addAll([
         '/404.html',
         '/images/cardapio/acai/acai350.png',
@@ -85,17 +85,14 @@ self.addEventListener('install', function(event) {
         '/images/home/post2.231d0ce0.jpg',
         '/images/home/post3.0882097e.jpg',
         '/images/home/post4.11996280.jpg',
-        '/images/menu/.DS_Store',
         '/images/menu/cardapio.svg',
         '/images/menu/cardapio_.svg',
         '/images/menu/contact.svg',
         '/images/menu/home.svg',
         '/images/menu/ico_ifood.svg',
         '/images/ogimage.png',
-        '/images/socials/.DS_Store',
         '/images/socials/ico_facebook.4157d6d0.svg',
         '/images/socials/ico_ifood.svg',
-        '/images/uis/.DS_Store',
         '/images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg',
         '/images/uis/backTolist-centered.svg',
         '/images/uis/backTolist.svg',
@@ -147,7 +144,7 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
 
-        caches.open('v1').then(function (cache) {
+        caches.open('v2').then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
