@@ -2,7 +2,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v2').then(function(cache) {
       return cache.addAll([
-        '/404.html',
+        '/favicon.ico',
         '/images/cardapio/acai/acai350.png',
         '/images/cardapio/acai/acai700.png',
         '/images/cardapio/acai/barcaG.png',
@@ -103,10 +103,17 @@ self.addEventListener('install', function(event) {
         '/images/uis/ic_paper_plane_24px.svg',
         '/images/uis/menu-icon.c42b098c.svg',
         '/images/uis/vertical-sppliter.ed85c15f.svg',
+        '/index.htm',
+        '/index.tocompile.html',
+        '/listFiles.js',
+        '/manifest.json',
+        '/robots.txt',
         '/scripts/scripts.bf24d468.js',
         '/scripts/vendor.6439a2d9.js',
         '/styles/main.f483c88f.css',
         '/styles/vendor.99529543.css',
+        '/sw.js',
+        '/sw_v2.js',
         '/views/acai.html',
         '/views/cardapio.html',
         '/views/contact.html',
