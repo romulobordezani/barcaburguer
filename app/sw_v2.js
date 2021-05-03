@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v2').then(function(cache) {
+    caches.open('v3').then(function(cache) {
       return cache.addAll([
         '/favicon.ico',
         '/images/cardapio/acai/acai350.png',
@@ -101,8 +101,8 @@ self.addEventListener('install', function(event) {
         '/images/uis/ic_paper_plane_24px.svg',
         '/images/uis/menu-icon.c42b098c.svg',
         '/images/uis/vertical-sppliter.ed85c15f.svg',
-        '/scripts/scripts.bf24d468.js',
-        '/scripts/vendor.6439a2d9.js',
+        '/scripts/scripts.47b3cc59.js',
+        '/scripts/vendor.5d79a25f.js',
         '/styles/main.f483c88f.css',
         '/styles/vendor.99529543.css',
         '/views/acai.html',
