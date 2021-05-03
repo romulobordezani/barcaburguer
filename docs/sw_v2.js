@@ -2,6 +2,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v2').then(function(cache) {
       return cache.addAll([
+        '/favicon.ico',
         '/images/cardapio/acai/acai350.png',
         '/images/cardapio/acai/acai700.png',
         '/images/cardapio/acai/barcaG.png',
@@ -93,8 +94,8 @@ self.addEventListener('install', function(event) {
         '/images/uis/ic_paper_plane_24px.svg',
         '/images/uis/menu-icon.c42b098c.svg',
         '/images/uis/vertical-sppliter.ed85c15f.svg',
-        '/scripts/scripts.bf24d468.js',
-        '/scripts/vendor.6439a2d9.js',
+        '/scripts/scripts.47b3cc59.js',
+        '/scripts/vendor.b6673da8.js',
         '/styles/main.f483c88f.css',
         '/styles/vendor.99529543.css',
         '/views/acai.html',
@@ -102,6 +103,13 @@ self.addEventListener('install', function(event) {
         '/views/contact.html',
         '/views/directives/product.html',
         '/views/home.html',
+        '/views/includes/browse-happy.html',
+        '/views/includes/facebook-sdk.html',
+        '/views/includes/footer.html',
+        '/views/includes/menu-top-desktop.html',
+        '/views/includes/menu-top-mobile.html',
+        '/views/includes/ng-view.html',
+        '/views/includes/pre-loader.html',
         '/views/regulamento.html',
         '/views/seed.html'
       ]);
