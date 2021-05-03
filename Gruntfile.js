@@ -304,7 +304,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.dist %>',
-                    src: ['*.html', 'views/**/*.html'],
+                    src: ['views/**/*.html'],
                     dest: '<%= yeoman.dist %>'
                 }]
             }
@@ -410,7 +410,7 @@ module.exports = function (grunt) {
                 options: {
                     flatten: true,
                     includePath: '<%= yeoman.app %>/views/includes',
-                    banner: '<!-- Romulo Bordezani Portfolio -->\n'
+                    banner: '<!-- Barca Burguer -->\n'
                 }
             },
 
