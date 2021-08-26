@@ -2,27 +2,28 @@
 @import 'libs/measures';
 @import 'libs/colors';
 @import 'libs/animations';
-@import 'directives/product';
+
+html {
+  height: 100%;
+}
 
 body {
-
   font-family: 'PT Sans', sans-serif;
   font-weight: 200;
   letter-spacing: 0.3px;
-  overflow-y: hidden;
-  background-color: $white;
+  background-color: $bg-black;
   font-size: 100%;
   line-height: 1.5;
 
   @import 'assets/menu-top.scss';
 
-  md-content#ngview-container{
-    div#ngview {
-      @import 'views/home';
-      @import 'views/contact';
-      @import 'views/cardapio';
-    }
+  div#ngview {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    @import 'views/home';
   }
+
   @import 'assets/footer';
 }
 

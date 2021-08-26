@@ -8,8 +8,8 @@
  * Controller of the rbApp
  */
 angular.module('rbApp')
-  .controller('appController', ['$scope', '$mdSidenav','leftMenuService', '$location', '$rootScope', '$timeout', 'CONFIG',
-    function( $scope, $mdSidenav, leftMenuService, $location, $rootScope, $timeout, CONFIG ){
+  .controller('appController', ['$scope', '$mdSidenav',  '$location', '$rootScope', '$timeout', 'CONFIG',
+    function( $scope, $mdSidenav, $location, $rootScope, $timeout, CONFIG ){
 
       var menu = {
 
@@ -59,13 +59,6 @@ angular.module('rbApp')
         },
 
         loadService : function(){
-
-          leftMenuService
-            .loadMenu()
-            .then( function( leftMenu ) {
-              $scope.leftMenuList = [].concat(leftMenu);
-              menu.init();
-            });
 
         },
 

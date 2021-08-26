@@ -9,11 +9,9 @@ angular
     'ngSanitize',
     'ngMaterial',
     'ngMessages',
-    'mdParallax',
     'angularytics',
     'plangular',
     'addClassOnClick',
-    'productDirective'
   ])
 
   .config(
@@ -23,37 +21,6 @@ angular
         .when('/', {
           templateUrl: 'views/home.html',
           controller: 'homeController',
-          animation: 'fade'
-        })
-
-        .when('/acai', {
-          templateUrl: 'views/acai.html',
-          controller: 'acaiController',
-          animation: 'fade'
-        })
-
-        .when('/contato', {
-          templateUrl: 'views/contact.html',
-          controller: 'contactController',
-          animation: 'fade',
-          hideFooter : true
-        })
-
-        .when('/cardapio', {
-          templateUrl: 'views/cardapio.html',
-          controller: 'cardapioController',
-          animation: 'fade'
-        })
-
-        .when('/regulamento', {
-          templateUrl: 'views/regulamento.html',
-          controller: 'homeController',
-          animation: 'fade'
-        })
-
-        .when('/seed', {
-          templateUrl: 'views/seed.html',
-          controller: 'seedController',
           animation: 'fade'
         })
 
@@ -78,7 +45,7 @@ angular
     $rootScope.date = new Date();
 
     const environment = document.location.host.indexOf('localhost') >= 0 ? 'local' : 'outside';
-    const loadingTime = environment === 'local' ? 100 : 10000;
+    const loadingTime = environment === 'local' ? 100 : 100;
 
 
     $timeout( function(){
@@ -100,14 +67,7 @@ angular
 
 
     $rootScope.$on('$routeChangeSuccess', function () {
-      Animator.scrollTo(document.getElementById('ngview-container'), 0, 500);
-    });
-
-
-    $http.get('views/contact.html', { cache: $templateCache }).then(function(){
-      $http.get('views/cardapio.html', { cache: $templateCache }).then(function(){
-        $http.get('views/acai.html', { cache: $templateCache }).then(function(){});
-      });
+      Animator.scrollTo(document.getElementById('rb-body'), 0, 500);
     });
 
     var signature = [

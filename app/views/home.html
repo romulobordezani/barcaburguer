@@ -1,148 +1,62 @@
-<div id="home">
-
-  <!-- main -->
-  <div
-    id="post0"
-    layout="row"
-    layout-sm="col"
-    layout-wrap
-    layout-align="start space-around"
-    layout-align-gt-md="center space-around"
-    class="post"
-    ng-class="{ stick : window.screen.width > 600 }"
-  >
-    <div flex hide-xs hide-sm hide-md>&nbsp;</div>
-    <div flex flex-gt-md="60" class="right-display" hide-xs hide-sm hide-md>
-      <div layout="column" layout-align="center start">
-        <div class="title">Hambúrguer de verdade.</div>
-        <div class="description">Na comodidade da sua casa.</div>
-        <div class="contacts">
-          <div
-            layout="column"
-            layout-gt-md="row"
-            layout-align="start space-around"
-          >
-
-            <div>
-              <a href="tel:1138582266"><img src="images/contact/ic_phone_24px.svg" alt="Telefone" /> 11 3858 2266</a>
-            </div>
-
-            <div>
-              <a target="_BLANK" href="https://api.whatsapp.com/send?phone=5511991405067&text=Pedido%20Barca%20Burguer"><img src="images/contact/whatsapp-logo.png" alt="Whatsapp"  /> 11 9 9140-5067</a>
-            </div>
-
-            <div>
-              <a target="_BLANK" href="https://www.ifood.com.br/delivery/sao-paulo-sp/barca-burguer-vila-santista"><img src="images/socials/ico_ifood.svg" alt="iFood" style="max-width: 80px;"  /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div id="post0" class="post">
+  <div class="right-display">
+    <div class="text title noselect">Hambúrguer de verdade,</div>
+    <div class="text description noselect">na comodidade da sua casa.</div>
   </div>
+</div>
 
-  <div id="post-cards" layout="row" layout-wrap layout-align="space-around center" layout-align-sm="center space-around" class="post">
-
-    <md-card class="no-select" clickable clickable-target="_blank" clickable-url="https://www.ifood.com.br/delivery/sao-paulo-sp/barca-burguer-vila-santista"  >
-      <img src="images/home/destaque_ifood.jpg" alt="Agora no iFood" class="md-card-image" >
-      <md-card-content>
-        <p> Faça já seu pedido pelo iFood. </p>
-      </md-card-content>
-    </md-card>
-
-    <md-card class="no-select" clickable  clickable-url="#!/cardapio"  >
-      <img src="images/home/destaque_cardapio.jpg" alt="Nosso Cardápio" class="md-card-image" >
-      <md-card-content>
-        <p> Consulte nosso cardápio.</p>
-      </md-card-content>
-    </md-card>
-
-    <md-card class="no-select" clickable  clickable-url="#!/acai"  >
-      <img src="images/home/destaque_acai.jpg" alt="Açaí" class="md-card-image" >
-      <md-card-content>
-        <p> Alguém aí disse açaí?</p>
-      </md-card-content>
-    </md-card>
+<div id="post-acai" class="post">
+  <div class="right-display">
+    <div class="text title noselect">Açaí de primeira</div>
+    <div class="text description noselect">e bem acompanhado.</div>
   </div>
+</div>
 
-  <!-- Combos -->
-  <div id="post-combos" layout="row" layout-wrap layout-align-sm="center space-around" class="post stick" >
-    <div flex>
-      <div style="text-align: center;">
-        <img src="images/home/combo-destaque.png" alt="">
-      </div>
-
-      <div layout="row" layout-wrap layout-align="center space-around" layout-align-sm="center space-around" style="margin-top: 30px;">
-
-        <md-card class="combo-box" >
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Completaço!</span>
-              <span class="md-subhead">Hot dog completo <span class="plus-icon">+</span> fritas pequena <span class="plus-icon">+</span> refri lata</span>
-              <span class="md-subhead price">R$ 22,00</span>
-            </md-card-title-text>
-          </md-card-title>
-        </md-card>
-
-        <md-card class="combo-box">
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Porko Presumido</span>
-              <span class="md-subhead">Hamburguer de pernil <span class="plus-icon">+</span> fritas pequena <span class="plus-icon">+</span> refri lata</span>
-              <span class="md-subhead price">R$ 26,50</span>
-            </md-card-title-text>
-          </md-card-title>
-        </md-card>
-
-        <md-card class="combo-box">
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Combo: Trem bão!</span>
-              <span class="md-subhead">Mineirinho <span class="plus-icon">+</span> fritas pequena <span class="plus-icon">+</span> refri lata</span>
-              <span class="md-subhead price">R$ 29,90</span>
-            </md-card-title-text>
-          </md-card-title>
-        </md-card>
-
-        <md-card class="combo-box">
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Cerveja em boa companhia</span>
-              <span class="md-subhead">2 Skol litrão <span class="plus-icon">+</span> Porção de calabresa</span>
-              <span class="md-subhead price">R$ 39,90</span>
-            </md-card-title-text>
-          </md-card-title>
-        </md-card>
-
-        <md-card class="combo-box">
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Combo Kids</span>
-              <span class="md-subhead">Hambúrguer de carne <span class="plus-icon">+</span> fritas pequena <span class="plus-icon">+</span> Itubaina 237 ml</span>
-              <span class="md-subhead price">R$ 26,90</span>
-            </md-card-title-text>
-          </md-card-title>
-        </md-card>
-
-      </div>
-
-    </div>
+<div id="post-dogs" class="post">
+  <div class="right-display">
+    <div class="text title noselect">Hot Dog no capricho</div>
+    <div class="text description noselect">Como você escolher.</div>
   </div>
+</div>
 
-  <div id="post-hearts" class="post"></div>
+<div id="post-cards" class="post cards" >
+  <md-card class="no-select" clickable clickable-target="_blank" clickable-url="https://www.ifood.com.br/delivery/sao-paulo-sp/barca-burguer-vila-santista"  >
+    <img src="images/home/destaque_ifood.jpg" alt="Agora no iFood" class="md-card-image" >
+    <md-card-content>
+      <p> Faça já seu pedido pelo iFood.</p>
+    </md-card-content>
+  </md-card>
 
-  <!-- Fidelidade -->
-  <div id="post-fidelidade" class="post stick">
-    <div layout="column" class="footer-display">
-      <div class="title">
-        Cartão de fidelidade
-      </div>
-      <div class="description">
-        A cada 10 pedidos acima de R$ 25,00, ganhe um combo grátis!
-      </div>
-      <div class="call-to-action">
-        Peça o seu.
-      </div>
-    </div>
-  </div>
+  <md-card class="no-select" clickable clickable-target="_blank" clickable-url="https://wa.me/c/5511991405067" >
+    <img src="images/home/destaque_cardapio.jpg" alt="Nosso Cardápio" class="md-card-image" >
+    <md-card-content>
+      <p> Consulte o cardápio via Whatsapp.</p>
+    </md-card-content>
+  </md-card>
 
+  <md-card class="no-select" clickable clickable-target="_blank"  clickable-url="https://wa.me/c/5511991405067" >
+    <img src="images/home/destaque_acai.jpg" alt="Açaí" class="md-card-image" >
+    <md-card-content>
+      <p>Peça o melhor açaí da Zona Norte de SP.</p>
+    </md-card-content>
+  </md-card>
+</div>
+
+
+<div class="post cards card-mobile">
+  <md-card class="no-select" clickable clickable-target="_blank" clickable-url="https://www.ifood.com.br/delivery/sao-paulo-sp/barca-burguer-vila-santista"  >
+    <img src="images/home/destaque_ifood.jpg" alt="Agora no iFood" class="md-card-image" >
+    <md-card-content>
+      <p> Faça já seu pedido pelo iFood.</p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="post cards card-mobile">
+  <md-card class="no-select" clickable clickable-target="_blank" clickable-url="https://wa.me/c/5511991405067" >
+    <img src="images/home/destaque_cardapio.jpg" alt="Nosso Cardápio" class="md-card-image" >
+    <md-card-content>
+      <p> Ou consulte o cardápio via Whatsapp.</p>
+    </md-card-content>
+  </md-card>
 </div>

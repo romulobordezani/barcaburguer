@@ -2,10 +2,8 @@
 <html class="no-js" ng-app="rbApp" ng-cloak >
 
 <head>
-
   <meta charset="utf-8">
   <title>Barca Burguer</title>
-
   <META NAME="robots" CONTENT="index, follow">
   <META NAME="description" CONTENT="Sob o comando da chef de cozinha Thays Bordezani, a lanchonete Barca Burguer traz hamburgueres, açaís, sorvetes, salgados e outras delícias a preço acessível no Bairro do Limão, São Paulo.">
   <META NAME="keywords" CONTENT="barca burguer, a barca burguer, a barca burger, barca, burger, burguer, limão, casa verde, hamburguer, hamburger, lanche, açaí, acai, assaí,  barcaburguer" >
@@ -72,10 +70,6 @@
   </noscript>
   <!-- End Facebook Pixel Code -->
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
-
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
@@ -94,9 +88,9 @@
   include "facebook-sdk.html"
   include "browse-happy.html"
   include "pre-loader.html"
-  include "menu-top-mobile.html"
-  include "menu-top-desktop.html"
+  include "menu-top.html"
   include "ng-view.html"
+  include "footer.html"
 
   <div id="dependency-injector" >
 
@@ -119,27 +113,11 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/acai.controller.js"></script>
     <script src="scripts/controllers/app.controller.js"></script>
     <script src="scripts/controllers/home.controller.js"></script>
-    <script src="scripts/controllers/contact.controller.js"></script>
-    <script src="scripts/controllers/cardapio.controller.js"></script>
-    <script src="scripts/controllers/seed.controller.js"></script>
-    <script src="scripts/controllers/navbar-desktop.js"></script>
-
-
-    <script src="scripts/services/leftMenu.service.js"></script>
-    <script src="scripts/services/home.service.js"></script>
-
-    <script src="scripts/providers/transformRequestAsFormPost.provider.js"></script>
     <script src="scripts/providers/animator.provider.js"></script>
     <script src="scripts/providers/utils.provider.js"></script>
-
-
     <script src="scripts/directives/clickable.directive.js"></script>
-    <script src="scripts/directives/parallax.directive.js"></script>
-    <script src="scripts/directives/product.directive.js"></script>
-
     <script src="scripts/config/config.constants.js"></script>
     <!-- endbuild -->
 
@@ -159,21 +137,5 @@
     }
   </script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAEJhwr18VeNsBRSaEmn9FXK4Hht38JgsQ",
-      authDomain: "barcaburguer-delicias.firebaseapp.com",
-      databaseURL: "https://barcaburguer-delicias.firebaseio.com",
-      projectId: "barcaburguer-delicias",
-      storageBucket: "",
-      messagingSenderId: "464762566201",
-      appId: "1:464762566201:web:e4dbaaa782ff5546"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
 </body>
-
 </html>

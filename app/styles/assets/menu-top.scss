@@ -1,245 +1,68 @@
-md-toolbar {
-
+.header {
   min-width: 320px;
+  width: 100%;
+  color: $black;
+  background-color: transparent;
+  height: 60px;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
 
-  &#header {
-
-    color: $black;
-    background-color: $bg-black;
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    z-index: 50;
-
-    .home-logo {
-      position: absolute;
-      width: 160px;
-      left: 10px;
-      top: 0;
-      background: #151515;
-      height: 100px;
-      padding: 26px;
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    }
-
-    div#menu-row {
-
-      .desktop-menu {
-
-        md-content.md-default-theme, md-content {
-          background-color: transparent;
-        }
-
-        width: 600px;
-        margin-left: 300px;
-
-        .md-item-container {
-          img {
-            max-width: 30px;
-          }
-
-          .md-list-item-text {
-            color: white;
-          }
-        }
-
-      }
-
-      #social-links{
-
-        width: 260px;
-        float: right;
-        margin: 0px;
-        position: absolute;
-        right: 7px;
-
-        div {
-
-          float: right;
-          margin: 12px 7px 0;
-
-          @media (max-width:$flex-sm){
-            margin: 9px 7px 0;
-          }
-
-          a{
-
-            display:block;
-            width: 100%;
-
-            img{
-              width: 100%;
-              height: auto;
-            }
-
-          }
-
-        }
-
-        .fb-page{
-          width: 26px;
-          margin-top: 18px;
-          @media (max-width:$flex-sm){
-            margin-top: 15px;
-          }
-        }
-
-      }
-
-
-      #menu-splitter{
-
-        display: block;
-        content:' ';
-        background: transparent url('../images/uis/vertical-sppliter.svg') repeat left center;
-        background-size: 2px 31px;
-        height: 31px;
-        width: 1px;
-        margin-top: 16px;
-        float: right;
-
-      }
-
-      button.menuBtn {
-
-        border: none;
-        outline: none;
-        width: 70px;
-        outline: none;
-        background: transparent url('../images/uis/ic_menu_black_24px.svg') no-repeat center center;
-
-      }
-
-      h1.md-toolbar-tools {
-
-        letter-spacing: 2px!important;
-        max-width: 400px;
-
-        a {
-
-          outline: none;
-          color: $black;
-          cursor: pointer;
-
-          &:link, &:visited, &:hover{
-            color: $black;
-          }
-
-          img {
-
-            width: 90px;
-            height: auto;
-            margin: 3px 7px 0px 0px;
-            float: left;
-
-            @media ( min-width : $flex-md ){
-              margin: 13px 7px 0 9px;
-              width: 90px;
-            }
-
-            &.spin-blow{
-              -webkit-animation: spin 1.5s ease-out;
-              -o-animation: spin 1.5s ease-out;
-              animation: spin 1.5s ease-out;
-            }
-
-          }
-
-          span {
-
-            float: left;
-            margin: 6px 9px 0 0;
-            font-size: 17px;
-
-            @media ( max-width : 360px ){
-              margin: 11px 0 0 8px;
-              font-size: 16px;
-            }
-
-            @media ( min-width : 361px ){
-              margin: 8px 0 0 8px;
-              font-size: 17px;
-            }
-
-            @media ( min-width : $flex-md ){
-              margin: 20px 7px 0 0;
-              font-size: 17px;
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-
+  @media (max-width: $flex-sm) {
+    justify-content: space-between;
+    background: #151515;
   }
 
-}
+  &__logo {
+    width: 160px;
+    background: #151515;
+    height: 66px;
+    padding: 26px;
+    margin-left: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 
-md-sidenav{
-
-  md-list {
-
-    padding: 0;
-    height: 95%;
-    width: 100%;
-    position: absolute;
-
-    md-item {
-
-      height: 25%;
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
-
-      .md-button {
-
-        color: inherit;
-        font-weight: 500;
-        text-align: left;
-        width: 100%;
-        border-radius: 0;
-        margin: 0;
-        height: 100%;
-        padding-left: 15px;
-
-        &.md-focused.md-default-theme:not([disabled]) {
-          background-color: transparent;
-        }
-
-        .md-item-container {
-
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          margin-left: 30px;
-
-          img {
-            width: 50px;
-            height: 50px;
-            float: left;
-            &.ifood{
-              width: 110px;
-            }
-          }
-
-          .md-list-item-text {
-            float: left;
-            margin: 18px 0 0 0;
-            font-size: 20px;
-          }
-
-        }
-
-      }
-
-      .md-button.selected {
-        background-color: rgba(158, 158, 158, 0.33);
-      }
-
+    @media (max-width: $flex-sm) {
+      height: 30px;
+      padding: 10px 15px 50px 15px;
     }
-
   }
 
+  &__social {
+    display: flex;
+    justify-content: space-around;
+    width: 260px;
+    margin: 0;
+    position: relative;
+
+    @media (max-width: $flex-sm) {
+      width: 90px;
+    }
+
+    .insta-page {
+      width: 26px;
+      margin-top: 18px;
+      @media (max-width: $flex-sm) {
+        margin-top: 15px;
+      }
+    }
+
+    .fb-page {
+      display: flex;
+      &__logo {
+        width: 26px;
+        margin-top: 18px;
+        @media (max-width: $flex-sm) {
+          margin-top: 15px;
+        }
+      }
+
+      &__like {
+        margin-top: 20px;
+      }
+    }
+  }
 }

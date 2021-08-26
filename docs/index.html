@@ -2,10 +2,8 @@
 <html class="no-js" ng-app="rbApp" ng-cloak >
 
 <head>
-
   <meta charset="utf-8">
   <title>Barca Burguer</title>
-
   <META NAME="robots" CONTENT="index, follow">
   <META NAME="description" CONTENT="Sob o comando da chef de cozinha Thays Bordezani, a lanchonete Barca Burguer traz hamburgueres, açaís, sorvetes, salgados e outras delícias a preço acessível no Bairro do Limão, São Paulo.">
   <META NAME="keywords" CONTENT="barca burguer, a barca burguer, a barca burger, barca, burger, burguer, limão, casa verde, hamburguer, hamburger, lanche, açaí, acai, assaí,  barcaburguer" >
@@ -72,13 +70,9 @@
   </noscript>
   <!-- End Facebook Pixel Code -->
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
-
   <link rel="stylesheet" href="styles/vendor.99529543.css">
 
-  <link rel="stylesheet" href="styles/main.f483c88f.css">
+  <link rel="stylesheet" href="styles/main.7e3cbc9a.css">
 
   <meta name="facebook-domain-verification" content="tnfldgzwbigs70l0tdh9f7a99cmx2w" />
 </head>
@@ -92,7 +86,7 @@
           js = d.createElement(s); js.id = id;
           js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11&appId=449697712072737';
           fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));ß
+      }(document, 'script', 'facebook-jssdk'));
   </script>
 
   <!--[if lt IE 10]>
@@ -123,7 +117,6 @@
       background-color: #303030;
       height: 100vh;
       width: 100vw;
-      overflow: hidden;
     }
 
     div.pre-loader-wrapper{
@@ -342,113 +335,68 @@
   </style>
 
 
-  <md-toolbar id="header" layout="column" hide-gt-md="">
-
-    <div id="menu-row" layout="row">
-
-      <button ng-click="toggleSidenav('leftMenu')" class="menuBtn right noselect" >
-        <span class="visually-hidden noselect">Menu</span>
-      </button>
-
-      <div id="menu-splitter" ></div>
-
-      <h1 class="md-toolbar-tools noselect" layout-align-gt-sm="left" >
-        <a alt="Home" ng-click="blowOnClick();" ><img src="images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg" alt="Barca Burguer"/></a>
-      </h1>
-
-      <div id="social-links" class="noselect" >
-        <div hide-sm hide-xs class="fb-like" data-href="https://www.facebook.com/abarcaburguer" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-        <div hide-md hide-gt-md class="fb-like" data-href="https://www.facebook.com/abarcaburguer" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
-        <div class="fb-page"><a ng-href="https://www.facebook.com/abarcaburguer" target="_BLANK" ><img src="images/socials/ico_facebook.4157d6d0.svg"  /></a></div>
-      </div>
-
+  <div class="header">
+    <div class="header__logo noselect">
+      <a alt="BarcaBurguer Logo Image" >
+        <img src="images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg" alt="Barca Burguer"/>
+      </a>
     </div>
 
-  </md-toolbar>
-
-  <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="leftMenu" >
-    <md-list layout="column" layout-align="space-around right" >
-
-      <md-item ng-repeat="item in leftMenuList"  >
-        <md-button ng-click="menuClick(item, $event)" target="{{item.target}}" ng-class="{'selected' : item === selected }" md-swipe-left="swipeLeftMenu()" >
-          <div class="md-item-container"  >
-            <img ng-src="{{item.imgsrc}}" class="{{ item.class }}" alt="{{item.alt}}" />
-            <div class="md-list-item-text">{{item.label}}</div>
-          </div>
-        </md-button>
-      </md-item>
-
-    </md-list>
-  </md-sidenav>
-
-  <md-toolbar id="header" layout="column" hide-md="" hide-sm="" hide-xs="">
-    <div id="menu-row" layout="row">
-      <div class="home-logo noselect">
-        <a alt="Home" ng-click="blowOnClick();" ><img src="images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg" alt="Barca Burguer"/></a>
+    <div class="header__social noselect" >
+      <div class="insta-page">
+        <a ng-href="https://www.instagram.com/barcaburguersp/" target="_BLANK" rel="noopener noreferrer">
+          <img src="images/socials/ico_instagram.b90a0fcb.svg" />
+        </a>
       </div>
 
-      <div class="desktop-menu">
-        <md-content ng-controller="NavBarController" class="md-padding">
-          <md-nav-bar
-            md-selected-nav-item="currentNavItem"
-            nav-bar-aria-label="navigation links">
-            <md-nav-item md-nav-href="#!/" name="inicio">
-              Início
-            </md-nav-item>
-            <md-nav-item md-nav-href="#!/cardapio" name="cardapio">
-              Cardápio
-            </md-nav-item>
-            <md-nav-item md-nav-href="#!/acai" name="acai">
-              Açaí
-            </md-nav-item>
-            <md-nav-item md-nav-href="#!/contato" name="contato" >
-              Contato
-            </md-nav-item>
-          </md-nav-bar>
-        </md-content>
-      </div>
+      <div class="fb-page">
+        <div class="fb-page__logo">
+          <a ng-href="https://www.facebook.com/abarcaburguer" target="_BLANK" rel="noopener noreferrer">
+            <img src="images/socials/ico_facebook.4157d6d0.svg" />
+          </a>
+        </div>
 
-      <div id="social-links" class="noselect" >
-        <div hide-sm hide-xs class="fb-like" data-href="https://www.facebook.com/abarcaburguer" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-        <div hide-md hide-gt-md class="fb-like" data-href="https://www.facebook.com/abarcaburguer" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
-        <div class="fb-page"><a ng-href="https://www.facebook.com/abarcaburguer" target="_BLANK" ><img src="images/socials/ico_facebook.4157d6d0.svg"  /></a></div>
-      </div>
+        <div
+          class="fb-like fb-page__like"
+          data-href="https://www.facebook.com/abarcaburguer"
+          data-layout="button_count"
+          data-action="like"
+          data-size="small"
+          data-show-faces="true"
+          data-share="false"
+          hide-sm hide-xs
+        ></div>
 
+      </div>
     </div>
-  </md-toolbar>
+  </div>
 
-  <md-content flex id="ngview-container" style="overflow:auto;"  >
-    <div ng-view="" id="ngview" layout="column" class="view" ></div>
-  </md-content>
+  <div ng-view="" id="ngview" class="view" ></div>
 
   <footer ng-show="!hideFooter">
-    <md-toolbar id="footer" >
+    <div hide-sm hide-xs>
+      &copy; Barca Burguer {{ date |date:'yyyy'}}
+    </div>
 
-      <div layout="row" layout-align="start center" layout-padding class="footer-left" flex  >
+    <div class="whatsapp">
+      <a target="_BLANK" href="https://api.whatsapp.com/send?phone=5511991405067&text=Pedido%20Barca Burguer">
+        <img src="images/contact/whatsapp-logo.png" alt="Whatsapp" /> 11 9 9140-5067
+      </a>
+    </div>
 
-        <div layout="column" layout-xs="row" hide-sm hide-xs flex >
-          &copy; Barca Burguer {{ date |date:'yyyy'}}
-        </div>
-
-        <div layout="column" flex >
-          <a href="tel:1138582266"><img src="images/contact/ic_phone_24px.ad14821e.svg" alt="Telefone" class="md-avatar" /> 11 3858 2266</a>
-        </div>
-
-        <div layout="column" flex >
-          <a target="_BLANK" href="https://api.whatsapp.com/send?phone=5511991405067&text=Pedido%20Barca Burguer"><img src="images/contact/whatsapp-logo.png" alt="Whatsapp"  class="md-avatar" /> 11 9 9140-5067</a>
-        </div>
-      </div>
-
-    </md-toolbar>
+    <div class="ifood">
+      <a target="_BLANK" href="https://www.ifood.com.br/delivery/sao-paulo-sp/barca-burguer-vila-santista">
+        <img src="images/socials/ico_ifood.svg" alt="iFood"/>
+      </a>
+    </div>
   </footer>
-
 
 
   <div id="dependency-injector" >
 
-    <script src="scripts/vendor.5d79a25f.js"></script>
+    <script src="scripts/vendor.80006d43.js"></script>
 
-    <script src="scripts/scripts.47b3cc59.js"></script>
+    <script src="scripts/scripts.57a13c56.js"></script>
 
   </div>
 
@@ -466,21 +414,5 @@
     }
   </script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAEJhwr18VeNsBRSaEmn9FXK4Hht38JgsQ",
-      authDomain: "barcaburguer-delicias.firebaseapp.com",
-      databaseURL: "https://barcaburguer-delicias.firebaseio.com",
-      projectId: "barcaburguer-delicias",
-      storageBucket: "",
-      messagingSenderId: "464762566201",
-      appId: "1:464762566201:web:e4dbaaa782ff5546"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
 </body>
-
 </html>

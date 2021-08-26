@@ -1,38 +1,35 @@
 @import '../libs/colors';
 @import '../libs/measures';
 
-footer{
-  md-toolbar#footer{
+footer {
+  background: rgba(0, 0, 0, 0.87);
+  color: $white;
+  font-size: 11px;
+  -webkit-box-shadow: -1px 1px 8px 1px rgba(0,0,0,0);
+  box-shadow: -1px 1px 8px 1px rgb(0, 0, 0);
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 
-    background: $black;
-    color: $white;
-    font-size: 11px;
-    -webkit-box-shadow: -1px 1px 8px 1px rgba(0,0,0,0);
-    box-shadow: -1px 1px 8px 1px rgb(0, 0, 0);
-
-    a{
+  .whatsapp {
+    a {
       line-height: 26px;
-      font-size: 14px;
-    }
-
-    .footer-left{
-
-      margin-left: 25px;
-
-      @media(max-width:$flex-md){
-        margin-left: 0px;
-      }
-
-      img{
+      font-size: 20px;
+      img {
         max-width: 26px;
         float:left;
-        margin-right: 6px;
+        margin-right: 9px;
       }
-
     }
-
   }
 
-
+  .ifood {
+    img {
+      width: 60px;
+    }
+  }
 }
 
