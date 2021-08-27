@@ -45,7 +45,7 @@ angular
     $rootScope.date = new Date();
 
     const environment = document.location.host.indexOf('localhost') >= 0 ? 'local' : 'outside';
-    const loadingTime = environment === 'local' ? 100 : 100;
+    const loadingTime = environment === 'local' ? 100 : 10000;
 
 
     $timeout( function(){

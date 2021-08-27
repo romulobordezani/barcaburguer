@@ -37,7 +37,6 @@ var walk = function(dir, done) {
             '/views/includes/facebook-sdk.html',
             '/views/includes/footer.html',
             '/views/includes/menu-top.html',
-            '/views/includes/menu-top-mobile.html',
             '/views/includes/ng-view.html',
             '/views/includes/pre-loader.html',
           ];

@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v3').then(function(cache) {
+    caches.open('v4').then(function(cache) {
       return cache.addAll([
         '/favicon.ico',
         '/images/cardapio/acai/acai350.png',
@@ -72,7 +72,6 @@ self.addEventListener('install', function(event) {
         '/images/favicons/ms-icon-310x310.png',
         '/images/favicons/ms-icon-70x70.png',
         '/images/frySound.mp3',
-
         '/images/home/banner-acai-m.45a31681.jpg',
         '/images/home/banner-acai.0d69fb79.jpg',
         '/images/home/banner-burguer-m.43dfc232.jpg',
@@ -86,36 +85,25 @@ self.addEventListener('install', function(event) {
         '/images/home/destaque_ifood.e3b2e844.jpg',
         '/images/home/post2.7ba2d0e1.jpg',
         '/images/home/post3.fee9dcc8.jpg',
-        '/images/menu/cardapio.svg',
-        '/images/menu/cardapio_.svg',
-        '/images/menu/contact.svg',
-        '/images/menu/home.svg',
-        '/images/menu/ico_ifood.svg',
         '/images/ogimage.png',
         '/images/socials/ico_facebook.4157d6d0.svg',
         '/images/socials/ico_ifood.svg',
         '/images/socials/ico_instagram.b90a0fcb.svg',
+        '/images/socials/whatsapp-logo.b5cc4133.png',
         '/images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg',
         '/images/uis/menu-icon.c42b098c.svg',
         '/images/uis/vertical-sppliter.ed85c15f.svg',
-        '/scripts/scripts.57a13c56.js',
+        '/scripts/scripts.9b8e1cce.js',
         '/scripts/vendor.80006d43.js',
-        '/styles/main.7e3cbc9a.css',
+        '/styles/main.d1562e7a.css',
         '/styles/vendor.99529543.css',
-        '/views/acai.html',
-        '/views/cardapio.html',
-        '/views/contact.html',
-        '/views/directives/product.html',
         '/views/home.html',
         '/views/includes/browse-happy.html',
         '/views/includes/facebook-sdk.html',
         '/views/includes/footer.html',
         '/views/includes/menu-top.html',
-        '/views/includes/menu-top-mobile.html',
         '/views/includes/ng-view.html',
-        '/views/includes/pre-loader.html',
-        '/views/regulamento.html',
-        '/views/seed.html'
+        '/views/includes/pre-loader.html'
       ]);
     })
   );
@@ -139,7 +127,7 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
 
-        caches.open('v2').then(function (cache) {
+        caches.open('v4').then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
