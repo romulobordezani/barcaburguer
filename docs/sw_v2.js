@@ -1,6 +1,6 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v4').then(function(cache) {
+    caches.open('v5').then(function(cache) {
       return cache.addAll([
         '/favicon.ico',
         '/images/cardapio/acai/acai350.png',
@@ -93,8 +93,8 @@ self.addEventListener('install', function(event) {
         '/images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg',
         '/images/uis/menu-icon.c42b098c.svg',
         '/images/uis/vertical-sppliter.ed85c15f.svg',
-        '/scripts/scripts.9b8e1cce.js',
-        '/scripts/vendor.80006d43.js',
+        '/scripts/scripts.e239935c.js',
+        '/scripts/vendor.98460ea9.js',
         '/styles/main.d1562e7a.css',
         '/styles/vendor.99529543.css',
         '/views/home.html',
@@ -127,7 +127,7 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
 
-        caches.open('v4').then(function (cache) {
+        caches.open('v5').then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
