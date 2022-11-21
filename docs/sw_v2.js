@@ -3,13 +3,6 @@ self.addEventListener('install', function(event) {
     caches.open('v5').then(function(cache) {
       return cache.addAll([
         '/favicon.ico',
-        '/images/contact/contatos-title.png',
-        '/images/contact/ic_email_24px.8c518dde.svg',
-        '/images/contact/ic_person_24px.ce91e393.svg',
-        '/images/contact/ic_phone_24px.ad14821e.svg',
-        '/images/contact/ic_place_24px.1b0c99d0.svg',
-        '/images/contact/qr-code.png',
-        '/images/contact/whatsapp-logo.png',
         '/images/favicons/android-chrome-192x192.png',
         '/images/favicons/android-chrome-512x512.png',
         '/images/favicons/android-icon-144x144.png',
