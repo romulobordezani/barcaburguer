@@ -18,7 +18,7 @@ body {
   @import 'assets/menu-top.scss';
 
   div#ngview {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
     @import 'views/home';
