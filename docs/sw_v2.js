@@ -91,8 +91,6 @@ self.addEventListener('install', function(event) {
         '/images/socials/ico_instagram.b90a0fcb.svg',
         '/images/socials/whatsapp-logo.b5cc4133.png',
         '/images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg',
-        '/images/uis/menu-icon.c42b098c.svg',
-        '/images/uis/vertical-sppliter.ed85c15f.svg',
         '/scripts/scripts.e239935c.js',
         '/scripts/vendor.98460ea9.js',
         '/styles/main.d1562e7a.css',
