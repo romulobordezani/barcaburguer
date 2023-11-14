@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --color-barca-black: #303030;
+    --breakpoint-xs : 320px;
+    --breakpoint-sm	: 600px;
+    --breakpoint-md	: 960px;
+    --breakpoint-lg	: 1200px;
+    --breakpoint-hd	: 1920px;
+  }
+}
+
+body {
+    background-color: var(--color-barca-black);
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    min-width: 320px;
+    width: 100%;
+    color: var(--color-barca-black);
+    background-color: transparent;
+    height: 60px;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+  
+    @media (max-width: 600px) {
+      justify-content: space-between;
+      background: #151515;
+    }
+  
+    &__logo {
+      width: 160px;
+      background: #151515;
+      height: 66px;
+      padding: 26px;
+      margin-left: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  
+      @media (max-width: 600px) {
+        height: 30px;
+        padding: 10px 15px 50px 15px;
+      }
+    }
+  
+    &__social {
+      display: flex;
+      justify-content: space-around;
+      width: 260px;
+      margin: 0;
+      position: relative;
+  
+      @media (max-width: 600px) {
+        width: 90px;
+      }
+  
+      .insta-page {
+        width: 26px;
+        margin-top: 18px;
+        @media (max-width: --breakpoint-sm) {
+          margin-top: 15px;
+        }
+      }
+  
+      .fb-page {
+        display: flex;
+        &__logo {
+          width: 26px;
+          margin-top: 18px;
+          @media (max-width: 600px) {
+            margin-top: 15px;
+          }
+        }
+  
+        &__like {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  
+
+.snapper-container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.post {
+    padding: 0;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+#post-home {
+    background-image: url(../images/home/banner-burguer-m.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
