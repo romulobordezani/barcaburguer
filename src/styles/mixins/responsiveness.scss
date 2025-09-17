@@ -1,0 +1,61 @@
+/* MOBILE */
+$res-mobile: 320px;
+$res-sm: 600px;
+$res-md: 960px;
+
+
+/* TABLETs */
+$res-md: 960px;
+$res-lg: 1200px;
+
+/* DESKTOPS */
+$res-hd: 1200px;
+$res-full-hd: 1920px;
+$res-2k: 2560px;
+$res-4k: 3840px;
+
+
+@mixin handheld() {
+  @media screen and (max-width: ($res-md - 2px)) {
+    @content;
+  }
+}
+
+@mixin handset_portrait() {
+  @media screen and (max-width: ($res-sm - 2px)) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin handset_landscape() {
+  @media screen and (max-width: ($res-sm - 2px)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet_portrait() {
+  @media screen and (min-width: ($res-sm)) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tablet_landscape() {
+  @media screen and (min-width: ($res-sm)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: ($res-lg)) {
+    @content;
+  }
+}
+
+@mixin large_desktop() {
+  @media screen and (min-width: ($res-full-hd)) {
+    @content;
+  }
+}
+
+
+

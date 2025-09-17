@@ -1,0 +1,78 @@
+@use '../variables' as *;
+@use '../animations/jello.scss' as *;
+
+.tippy-content {
+  color: $white;
+  font-size: 1.2em;
+}
+
+#post-burger {
+  .sprites {
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 100%;
+    padding-top: 170px;
+    justify-content: center;
+    background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .sprite {
+      flex: 0 0 auto;
+      background-image: url('/images/home/hamburgers-sprite.png');
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 270px;
+      height: 200px;
+      cursor: help;
+
+      &:hover{
+        -webkit-animation-name: jello;
+        -moz-animation-name: jello;
+        -ms-animation-name: jello;
+        -o-animation-name: jello;
+        animation-name: jello;
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -ms-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        animation-duration: 1s;
+      }
+    }
+
+    .burger-sprite-1 {
+      background-position: 0 0;
+    }
+
+    .burger-sprite-2 {
+      background-position: -284px 20px;
+    }
+
+    .burger-sprite-3 {
+      background-position: 13px -192px;
+      height: 180px;
+    }
+
+    .burger-sprite-4 {
+      background-position:  -269px -179px;
+    }
+
+    .burger-sprite-5 {
+      background-position: 0 -578px;
+    }
+
+    .burger-sprite-6 {
+      background-position: -266px -593px;
+    }
+
+    .burger-sprite-7 {
+      background-position: -257px -379px;
+    }
+
+    .burger-sprite-8 {
+      background-position: 18px -382px;
+    }
+  }
+}

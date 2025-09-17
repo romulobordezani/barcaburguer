@@ -1,0 +1,26 @@
+@use '../variables' as *;
+
+#post-acai {
+  position: relative;
+
+  .sprites {
+    width: 50%;
+    height: 100%;
+    min-height: 300px;
+    background-image: url("/images/home/banner-acai.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 80%;
+  }
+
+  .right-display {
+    .title {
+      color: #683a7b;
+    }
+
+    .description {
+      color: $bb_grey;
+    }
+  }
+}

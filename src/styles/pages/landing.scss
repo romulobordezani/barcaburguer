@@ -1,0 +1,65 @@
+@use '../variables' as *;
+@use '../button.scss' as *;
+
+#post-landing {
+  position: relative;
+  padding: 0;
+  scroll-snap-align: center;
+  height: calc(100vh - $header-height);
+  background-image: url("/images/home/hearts.svg");
+  background-color: $card-black;
+  background-size: cover;
+  
+
+  @media (max-width: $flex-sm) {
+    background-size: cover;
+  }
+
+  .bg-base {
+    background-image: url("/images/home/banner-landing.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-attachment: fixed; */
+
+    .message {
+      width: max-content;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      max-width: 40%;
+      text-transform: uppercase;
+      text-shadow: none;
+
+      .title {
+        letter-spacing: -0.02em;
+        font-size: 2.6em;
+        font-weight: bolder;
+        line-height: 1.2;
+        color: $bb_grey;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.75);
+        padding: 2em;
+        border-radius: 15px 0px 0px 15px;
+      }
+
+      .description {
+        padding: 1.2rem;
+        color: $black;
+        letter-spacing: -0.05em;
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: center;
+        width: max-content;
+        background: #aaff00;
+        border-radius: 15px;
+        margin-top: -30px;
+      }
+    }    
+  }
+}

@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+.green {
+  color: $bb_green;
+}
+
+.purple {
+  color: $bb_purple;
+}
+
+.orange {
+  color: $bb_orange;
+}
+
+.white {
+  color: $white;
+}
+
+.red {
+  color: $bb_red;
+}
+
+.pink {
+  color: $bb_pink;
+}
+
+.title-green {
+  background: linear-gradient(180deg, #9ccb3c, #d7fd8c, #fefa00) text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-purple {
+  background: linear-gradient(180deg, #7f3f98, #a76bbf, #d7a0ff) text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-orange {
+  background: linear-gradient(180deg, #ff7a00, #ffb347, #ffd700) text;
+  -webkit-text-fill-color: transparent;
+}

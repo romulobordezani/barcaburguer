@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #9ccb3c;
+  --button_outline_color: #465c19;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  svg {
+    width: auto;
+    height: 25px;
+    margin-left: 0.5em;
+    margin-top: -6px;
+    vertical-align: middle;
+  }
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  
+}
+
+button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  transform: translateY(0);
+}

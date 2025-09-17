@@ -1,0 +1,242 @@
+@use 'reset' as *;
+@use 'variables' as *;
+@use 'clickable' as *;
+@use './pages/hamburguer.scss' as *;
+@use './pages/hot-dog.scss' as *;
+@use './pages/acai.scss' as *;
+@use './pages/landing.scss' as *;
+@use './pages/cards.scss' as *;
+@use 'card.scss' as *;
+@use 'fonts.scss' as *;
+@use 'mixins/responsiveness.scss' as *;
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  background-color: $black;
+  font-size: 1vw;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  min-width: 320px;
+  width: 100%;
+  height: 50px;
+
+  color: $white;
+  background-color: $bg-black;
+  z-index: 50;
+
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @include desktop() {
+    height: 60px;
+  }
+
+  @media (max-width: $flex-sm) {
+    justify-content: space-between;
+    background: #151515;
+  }
+
+  &__logo {
+    width: 100px;
+    height: 50px;
+    background: #151515;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      height: auto;
+    }
+
+    @include desktop() {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      margin-left: 10px;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      height: 70px;
+
+      img {
+        margin-top: 10px;
+      }
+    }
+
+    @include large_desktop() {
+      width: 320px;
+      height: 170px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    position: relative;
+
+    .insta-page {
+      width: 28px;
+      height: 28px;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .fb-page {
+      display: flex;
+
+      &__logo {
+        width: 28px;
+        height: 28px;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__like {
+        height: 28px;
+        width: auto;
+
+        span {
+          line-height: 28px;
+          font-size: 12px;
+          color: $white;
+          padding-top: 6px;
+          width: 100px!important;
+        }
+
+        @include desktop() {
+          span {
+            padding-top: 4px;
+            font-size: 14px;
+            width: 170px!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.87);
+  color: $white;
+  font-size: 11px;
+  -webkit-box-shadow: -1px 1px 8px 1px rgba(0,0,0,0);
+  box-shadow: -1px 1px 8px 1px rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+
+  .whatsapp {
+    a {
+      line-height: 26px;
+      font-size: 20px;
+      img {
+        max-width: 26px;
+        float:left;
+        margin-right: 9px;
+      }
+    }
+  }
+
+  .ifood {
+    img {
+      width: 60px;
+    }
+  }
+}
+
+.content {
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory;
+}
+
+.debug {
+  box-shadow: #4bf302 0 0 30px 0 inset;
+}
+
+.post {
+  padding: 0;
+  scroll-snap-align: center;
+  height: calc(100vh - $header-height);
+  background-image: url("/images/home/hearts.svg");
+  display: flex;
+  justify-content: space-around;
+  background-color: $card-black;
+  background-size: cover;
+  align-items: center;
+
+  .stick {
+    background-attachment: fixed;
+  }
+
+  .right-display {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .text, .description {
+      width: max-content;
+    }
+
+    .text {
+      letter-spacing: -0.05em;
+      font-size: 3.6em;
+      font-weight: bolder;
+      line-height: 1.2;
+
+      @media (max-width: $flex-sm) {
+        display: none;
+      }
+
+      @media (max-width: ($flex-hd - 1)) {
+        font-size: 3em;
+      }
+    }
+
+    .description {
+      color: #ffffffc2;
+      font-size: 2.6rem;
+      text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.80);
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+@use '../variables.scss' as *;
+@use '../mixins/responsiveness.scss' as *;
+
+#post-cards {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+
+  .clickable {
+    height: fit-content;
+    background: $white;
+    width: 250px;
+
+    .img {
+      overflow: hidden;
+      width: 250px;
+      height: 250px;
+
+      @include tablet_portrait() {
+        width: 10vw;
+        height: 10vw;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .label {
+      text-align: center;
+      font-size: 1em;
+      font-weight: bolder;
+      padding: 0.3em;
+      color: $black;
+    }
+  }
+}

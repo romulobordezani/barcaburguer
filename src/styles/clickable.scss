@@ -1,0 +1,37 @@
+
+@use 'animations/jello' as *;
+@use 'animations/hinge' as *;
+
+.clickable {
+
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;height:100%;
+
+  &:hover{
+    -webkit-animation-name: jello;
+    -moz-animation-name: jello;
+    -ms-animation-name: jello;
+    -o-animation-name: jello;
+    animation-name: jello;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+
+  &.clicked{
+    -webkit-animation-name: hinge;
+    -moz-animation-name: hinge;
+    -ms-animation-name: hinge;
+    -o-animation-name: hinge;
+    animation-name: hinge;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration:  1.5s;
+    -ms-animation-duration:  1.5s;
+    -o-animation-duration:  1.5s;
+    animation-duration:  1.5s;
+    transform-origin: top left;
+  }
+}
