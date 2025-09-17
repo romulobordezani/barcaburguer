@@ -1,14 +1,41 @@
-node_modules
-.idea
-dist
-.tmp
-.sass-cache
-.git
-bower_components
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs
+*.log
+*.pid
+
+# OS
 .DS_Store
-.svn
-log/*.log
-logs/*
-.idea
-npm-debug.log
-_notes
+Thumbs.db
+
+# Env files
+.env
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+coverage/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+*.tgz
+!.yarn/cache
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+pnp.*
