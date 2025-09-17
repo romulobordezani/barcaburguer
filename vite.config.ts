@@ -9,6 +9,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(() => {
   return {
+    base: '/barcaburguer/',
     plugins: [tsconfigPaths()],
     test: {
       globals: true,
