@@ -1,12 +1,18 @@
-![Barca Burguer](https://barcaburguer.com.br/images/uis/Logo_BarcaBurguer_degrade.dc16bb68.svg)
+![Barca Burguer](/public/favicon.png)
 
-Barca Burguer's site repository is just an old (Grunt + Angular 1 + Sass) project generated with [Yeoman](https://yeoman.io/).
+Barca Burguer's site repository.
 
-#### Note:
-I don't recommend to use it as boilerplate, please generate an updated new one using newer alternatives as angular-cli, react-create-app or vue-cli.
+---
 
-----
+## Frameworks & Libraries used
 
-**Best**,
+This new version uses the following main tools and libraries:
 
-Romulo Bordezani.
+- [Vite](https://vitejs.dev/) (build tool)
+- [Vanilla TypeScript](https://www.typescriptlang.org/)
+- [Sass/SCSS](https://sass-lang.com/)
+- [Tippy.js](https://atomiks.github.io/tippyjs/) (tooltips)
+
+---
+
+Made with ♥️ by Romulo Bordezani.
