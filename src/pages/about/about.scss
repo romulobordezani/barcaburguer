@@ -1,0 +1,8 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins/responsiveness.scss' as *;
+
+#post-about {
+  height: 100%;
+  width: 100%;
+  background-color: $card-black;
+}

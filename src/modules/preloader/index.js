@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     const preLoader = document.getElementById('main-pre-loader-wrapper');
     const body = document.getElementById('bb-body');
+
     if (preLoader && body) {
       body.classList.remove('loading');
       body.classList.add('loaded');
