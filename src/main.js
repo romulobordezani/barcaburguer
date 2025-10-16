@@ -25,7 +25,9 @@ tippy('.sprite', {
   offset: [0, -30],
   animation: 'scale',
   theme: 'translucent',
-  placement: 'top',
+  placement: 'auto',
+  hideOnClick: 'toggle',
+  trigger: "click"
 });
 
 
