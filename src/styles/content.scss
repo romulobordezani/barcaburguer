@@ -22,8 +22,10 @@
     background-size: 100%;
   
     @include desktop() {
+      flex-direction: row;
       scroll-snap-align: center;
       height: 100%;
+      align-items: center;
     }
 
     // Vary background size and rotation based on nth-child
@@ -45,6 +47,10 @@
     .sprites {
       height: auto;
       order: 2;
+
+      @include desktop() {
+        order: 1;
+      }
     }
   
     .right-display {
@@ -64,8 +70,8 @@
       @include desktop() {
         justify-content: center;
         align-items: start;
-        padding-left: 50%;
         width: 50%;
+        order: 2;
       }
   
       .text, .description {
@@ -91,8 +97,12 @@
   
       .description {
         color: #ffffffc2;
-        font-size: 2.6rem;
+        font-size: 1.6rem;
         text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.80);
+
+        @include desktop() {
+          font-size: 2.6rem;
+        }
       }
     }
   }

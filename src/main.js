@@ -22,9 +22,9 @@ tippy('.sprite', {
   duration: 200,
   appendTo: document.body,
   arrow: true,
+  offset: [0, -30],
   animation: 'scale',
   theme: 'translucent',
-  arrow: true,
   placement: 'top',
 });
 

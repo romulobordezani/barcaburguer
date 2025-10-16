@@ -10,6 +10,7 @@
 .tippy-box {
   background-color: #000000 !important;
   padding: 2em;
+  border-radius: 10px !important;
 }
 
 #post-burger {
@@ -18,7 +19,7 @@
     gap: 5%;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
+    
     background-repeat: no-repeat;
     background-size: contain;
     align-items: anchor-center;
@@ -26,14 +27,16 @@
     @include desktop() {
       padding-left: 0;
       gap: 2%;
+      background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
     }
 
     .sprite {
       flex: 0 0 auto;
       background-repeat: no-repeat;
       background-size: auto;
-      width: 270px;
-      height: 270px;
+      background-position: center;
+      width: 250px;
+      height: 200px;
       cursor: help;
 
       &:hover{
