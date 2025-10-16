@@ -23,6 +23,10 @@
     justify-content: flex-end;
     align-items: center;
 
+    @include desktop() {
+      background-position-x: unset;
+    }
+
     .right-display {
       width: 100%;
       height: 100%;

@@ -6,7 +6,6 @@
   overflow-y: scroll;
 
   @include desktop() {
-    height: calc(100vh);
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
   }
@@ -16,10 +15,11 @@
     height: auto;
     background-image: url("/images/home/hearts.svg");
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: start;
     background-color: $card-black;
     background-size: 100%;
-    align-items: center;
   
     @include desktop() {
       scroll-snap-align: center;
@@ -27,11 +27,6 @@
     }
 
     // Vary background size and rotation based on nth-child
-    &:nth-child(1) {
-      background-size: 95%;
-      background-position: right;
-    }
-
     &:nth-child(2) {
       background-size: 155%;
     }
@@ -46,25 +41,40 @@
       background-position-x: left;
       background-position-y: bottom;
     }
-  
-    .stick {
-      background-attachment: fixed;
+
+    .sprites {
+      height: auto;
+      order: 2;
     }
   
     .right-display {
-      height: 100%;
-      width: 50%;
+      position: relative;
+      height: auto;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: start;
       background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
       background-repeat: no-repeat;
       background-size: contain;
-      padding-left: 5%;
+      order: 1;
+      padding: $header-height + 10px 20px;  
+
+      @include desktop() {
+        justify-content: center;
+        align-items: start;
+        padding-left: 50%;
+        width: 50%;
+      }
   
       .text, .description {
-        width: max-content;
+        width: auto;
+
+        @include desktop() {
+          width: max-content;
+        }
+
       }
   
       .text {
@@ -72,13 +82,10 @@
         font-size: 3.6em;
         font-weight: bolder;
         line-height: 1.2;
-  
-        @media (max-width: $flex-sm) {
-          display: none;
-        }
-  
-        @media (max-width: ($flex-hd - 1)) {
-          font-size: 3em;
+        font-size: 3em;        
+
+        @include desktop() {
+          display: block;
         }
       }
   

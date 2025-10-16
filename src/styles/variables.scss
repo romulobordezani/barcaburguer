@@ -4,7 +4,8 @@ $flex-md: 960px;
 $flex-lg: 1200px;
 $flex-hd: 1920px;
 
-$header-height: 150px;
+$header-height-desktop: 150px;
+$header-height: $header-height-desktop - 60px;
 $footer-height: 50px;
 
 $bg-black: rgba(0, 0, 0, 0.77);

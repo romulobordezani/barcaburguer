@@ -17,16 +17,11 @@
     display: flex;
     gap: 5%;
     flex-wrap: wrap;
-    width: 50vw;
-    height: 100%;
-    padding-top: 170px;
     justify-content: center;
     background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
     background-repeat: no-repeat;
     background-size: contain;
     align-items: anchor-center;
-    /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); */
-    
 
     @include desktop() {
       padding-left: 0;
@@ -35,11 +30,10 @@
 
     .sprite {
       flex: 0 0 auto;
-      background-image: url('/images/home/hamburgers-sprite.png');
       background-repeat: no-repeat;
       background-size: auto;
       width: 270px;
-      height: 200px;
+      height: 270px;
       cursor: help;
 
       &:hover{
@@ -57,36 +51,35 @@
     }
 
     .burger-sprite-1 {
-      background-position: 0 0;
+      background-image: url('/images/home/burgers/burger-1.png');
     }
 
     .burger-sprite-2 {
-      background-position: -284px 20px;
+      background-image: url('/images/home/burgers/burger-2.png');
     }
 
     .burger-sprite-3 {
-      background-position: 13px -192px;
-      height: 180px;
+      background-image: url('/images/home/burgers/burger-3.png');
     }
 
     .burger-sprite-4 {
-      background-position:  -269px -179px;
+      background-image: url('/images/home/burgers/burger-4.png');
     }
 
     .burger-sprite-5 {
-      background-position: 0 -578px;
+      background-image: url('/images/home/burgers/burger-5.png');
     }
 
     .burger-sprite-6 {
-      background-position: -266px -593px;
+      background-image: url('/images/home/burgers/burger-6.png');
     }
 
     .burger-sprite-7 {
-      background-position: -257px -379px;
+      background-image: url('/images/home/burgers/burger-7.png');
     }
 
     .burger-sprite-8 {
-      background-position: 18px -382px;
+      background-image: url('/images/home/burgers/burger-8.png');
     }
   }
 }
