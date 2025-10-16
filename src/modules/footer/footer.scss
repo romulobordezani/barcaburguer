@@ -1,0 +1,58 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins/responsiveness.scss' as *;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footer-height;
+  background: rgba(0, 0, 0, 0.87);
+  color: $discret-black;
+  font-size: 0.9rem;      
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 20px;
+  line-height: 1.2rem;
+
+  @include desktop() {
+    font-size: 1.2rem;
+  }
+
+  &__copyright {
+    margin-bottom: 5px;
+
+    &-symbol {
+      font-size: 1rem;
+
+      @include desktop() {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__whatsapp {
+    a {
+      line-height: 1.2rem;
+      color: $discret-black;
+      img {
+        max-width: 26px;
+        margin-right: 9px;
+        vertical-align: middle;
+        margin-bottom: 3px;
+        filter: saturate(0) brightness(0.5);
+      }
+    }
+  }
+
+  &__luoda {
+    a {
+      filter: saturate(0) brightness(0.5);
+      img {
+        max-width: 80px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

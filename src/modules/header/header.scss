@@ -1,0 +1,128 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins/responsiveness.scss' as *;
+
+.header {
+  min-width: 320px;
+  width: 100%;
+  height: $header-height;
+  color: $white;
+  background-color: $bg-black;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__logo {
+    width: 100px;
+    height: auto;
+    background: #151515;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      height: auto;
+    }
+
+    @include desktop() {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      margin-left: 10px;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      height: 70px;
+
+      img {
+        margin-top: 10px;
+      }
+    }
+
+    @include large_desktop() {
+      width: 220px;
+      height: 110px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: anchor-center;
+    width: auto;
+    margin: 0;
+    position: relative;
+
+    @media screen and (min-width: 3000px) {
+      align-items: normal;
+    }
+    
+
+    .insta-page {
+      width: 28px;
+      height: 28px;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        transition: filter 0.3s ease, transform 0.3s ease;
+        filter: brightness(1) contrast(1);
+
+        &:hover {
+          filter: brightness(0.5) contrast(1.1);
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    .fb-page {
+      display: flex;
+
+      &__logo {
+        width: 28px;
+        height: 28px;
+        
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          transition: filter 0.3s ease, transform 0.3s ease;
+          filter: brightness(1) contrast(1);
+
+          &:hover {
+          filter: brightness(0.5) contrast(1.1);
+          transform: translateY(-3px);
+        }
+        }
+      }
+
+      &__like {
+        height: 28px;
+        width: 140px!important;
+
+        span {
+          color: $white;
+          padding-top: 4px;
+          width: 100px!important;
+          height: 38px!important;
+          vertical-align: middle!important;
+
+          @include desktop() {
+            width: 170px!important;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+/* Hide header when loading */
+.loading .header {
+  display: none;
+}

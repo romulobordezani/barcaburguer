@@ -1,0 +1,70 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins/responsiveness.scss' as *;
+
+#post-cards {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  --clickable-count: 5; /* Default count, can be updated by JS */
+
+  // Pseudo-element for background with filter
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/home/hearts.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%) brightness(0.8) contrast(1.2);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @include desktop() {
+    flex-direction: row;
+  }
+
+  .clickable {
+    height: fit-content;
+    background: $white;
+    width: calc((100% - (var(--clickable-count) * 2em)) / var(--clickable-count));
+    position: relative;
+    z-index: 1;
+
+    .img {
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+
+      @include tablet_portrait() {
+        width: 10vw;
+        height: 10vw;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .label {
+      text-align: center;
+      font-size: 1em;
+      font-weight: bolder;
+      padding: 0.3em;
+      color: $black;
+      display: none;
+
+      @include desktop() {
+        display: block;
+      }
+    }
+  }
+}
