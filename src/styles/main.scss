@@ -9,7 +9,7 @@
 @use '../pages/acai/acai.scss' as *;
 @use '../pages/landing/landing.scss' as *;
 @use '../pages/cards/cards.scss' as *;
-
+@use '../pages/about/about.scss' as *;
 
 @use '../modules/header/header.scss' as header;
 @use '../modules/footer/footer.scss' as footer;
@@ -32,6 +32,17 @@ body {
   .wrapper {
     display: block;
   }
+}
+
+.tippy-content {
+  color: $white;
+  font-size: 1.2em;
+}
+
+.tippy-box {
+  background-color: #000000 !important;
+  padding: 2em;
+  border-radius: 10px !important;
 }
 
 .debug {

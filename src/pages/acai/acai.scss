@@ -1,9 +1,7 @@
 @use '../../styles/variables.scss' as *;
 
 #post-acai {
-  position: relative;
-
-  .sprites {
+  .left-display {
     width: 50%;
     height: 100%;
     min-height: 300px;
@@ -12,15 +10,5 @@
     background-size: cover;
     background-position: center;
     background-size: 50%;
-  }
-
-  .right-display {
-    .title {
-      color: #683a7b;
-    }
-
-    .description {
-      color: $bb_grey;
-    }
   }
 }

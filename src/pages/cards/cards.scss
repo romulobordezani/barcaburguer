@@ -10,23 +10,6 @@
   position: relative;
   --clickable-count: 5; /* Default count, can be updated by JS */
 
-  // Pseudo-element for background with filter
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("/images/home/hearts.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: grayscale(100%) brightness(0.8) contrast(1.2);
-    z-index: 0;
-    pointer-events: none;
-  }
-
   @include desktop() {
     flex-direction: row;
   }

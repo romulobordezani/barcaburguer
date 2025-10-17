@@ -19,6 +19,7 @@
   @include desktop() {
     height: $header-height;
     background: linear-gradient(to bottom, #333333, rgba(0, 0, 0, 0));
+    padding: 25px;
   }
 
   &__logo {
@@ -32,12 +33,7 @@
 
     @include desktop() {
       width: 100px;
-      border-bottom-right-radius: 10px;
       height: 70px;
-
-      img {
-        margin-top: 10px;
-      }
     }
 
     @include large_desktop() {

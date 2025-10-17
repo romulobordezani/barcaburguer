@@ -4,18 +4,10 @@
 
 
 #post-landing {
-  position: relative;
-  padding: 0;
-  scroll-snap-align: center;
-  height: 100%;
-  background-image: url("/images/home/hearts.svg");
-  background-size: 125%;
-  background-position: right;
-
-  .bg-base {
+  .wrapper {
     background-image: url("/images/home/banner-landing.png");
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: -80px;
@@ -36,6 +28,7 @@
       flex-direction: column;
       text-transform: uppercase;
       text-shadow: none;
+      background-image: none;
 
       @include desktop() {
         max-width: 40%;
@@ -50,6 +43,10 @@
         text-align: center;
         width: max-content;
         margin-bottom: 50px;
+
+        @include desktop() {
+          margin-bottom: 0;
+        }
 
         #button-scroll-down {
           .button_top {

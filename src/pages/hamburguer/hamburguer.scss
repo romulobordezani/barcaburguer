@@ -2,19 +2,16 @@
 @use '../../styles/animations/jello.scss' as *;
 @use '../../styles/mixins/responsiveness.scss' as *;
 
-.tippy-content {
-  color: $white;
-  font-size: 1.2em;
-}
-
-.tippy-box {
-  background-color: #000000 !important;
-  padding: 2em;
-  border-radius: 10px !important;
-}
-
 #post-burger {
-  .sprites {
+  
+  /* @include desktop() {
+    flex-direction: row;
+    scroll-snap-align: center;
+    height: 100%;
+    align-items: center;
+  } */
+
+  .left-display {
     display: flex;
     gap: 5%;
     flex-wrap: wrap;
@@ -30,59 +27,61 @@
       background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
     }
 
-    .sprite {
-      flex: 0 0 auto;
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: center;
-      width: 250px;
-      height: 200px;
-      cursor: help;
+    
+  }
 
-      &:hover{
-        -webkit-animation-name: jello;
-        -moz-animation-name: jello;
-        -ms-animation-name: jello;
-        -o-animation-name: jello;
-        animation-name: jello;
-        -webkit-animation-duration: 1s;
-        -moz-animation-duration: 1s;
-        -ms-animation-duration: 1s;
-        -o-animation-duration: 1s;
-        animation-duration: 1s;
-      }
-    }
+  .sprite {
+    flex: 0 0 auto;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 250px;
+    height: 200px;
+    cursor: help;
 
-    .burger-sprite-1 {
-      background-image: url('/images/home/burgers/burger-1.png');
+    &:hover{
+      -webkit-animation-name: jello;
+      -moz-animation-name: jello;
+      -ms-animation-name: jello;
+      -o-animation-name: jello;
+      animation-name: jello;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      -ms-animation-duration: 1s;
+      -o-animation-duration: 1s;
+      animation-duration: 1s;
     }
+  }
 
-    .burger-sprite-2 {
-      background-image: url('/images/home/burgers/burger-2.png');
-    }
+  .burger-sprite-1 {
+    background-image: url('/images/home/burgers/burger-1.png');
+  }
 
-    .burger-sprite-3 {
-      background-image: url('/images/home/burgers/burger-3.png');
-    }
+  .burger-sprite-2 {
+    background-image: url('/images/home/burgers/burger-2.png');
+  }
 
-    .burger-sprite-4 {
-      background-image: url('/images/home/burgers/burger-4.png');
-    }
+  .burger-sprite-3 {
+    background-image: url('/images/home/burgers/burger-3.png');
+  }
 
-    .burger-sprite-5 {
-      background-image: url('/images/home/burgers/burger-5.png');
-    }
+  .burger-sprite-4 {
+    background-image: url('/images/home/burgers/burger-4.png');
+  }
 
-    .burger-sprite-6 {
-      background-image: url('/images/home/burgers/burger-6.png');
-    }
+  .burger-sprite-5 {
+    background-image: url('/images/home/burgers/burger-5.png');
+  }
 
-    .burger-sprite-7 {
-      background-image: url('/images/home/burgers/burger-7.png');
-    }
+  .burger-sprite-6 {
+    background-image: url('/images/home/burgers/burger-6.png');
+  }
 
-    .burger-sprite-8 {
-      background-image: url('/images/home/burgers/burger-8.png');
-    }
+  .burger-sprite-7 {
+    background-image: url('/images/home/burgers/burger-7.png');
+  }
+
+  .burger-sprite-8 {
+    background-image: url('/images/home/burgers/burger-8.png');
   }
 }
