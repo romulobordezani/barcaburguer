@@ -1,0 +1,7 @@
+.random-heart {
+  &.pulse {
+    animation: heartbeat var(--pulse-duration, 1.5s) ease-in-out infinite;
+    animation-delay: var(--pulse-delay, 0s);
+  }
+}
+
