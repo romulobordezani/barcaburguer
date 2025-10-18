@@ -22,7 +22,7 @@ export default defineConfig(() => {
           resolve(__dirname, 'src/modules/preloader'),
           resolve(__dirname, 'src/pages/landing'),
           resolve(__dirname, 'src/pages/hamburguer'),
-          resolve(__dirname, 'src/pages/hot-dog'),
+          resolve(__dirname, 'src/pages/tapioca'),
           resolve(__dirname, 'src/pages/acai'),
           resolve(__dirname, 'src/pages/cards'),
           resolve(__dirname, 'src/pages/about'),

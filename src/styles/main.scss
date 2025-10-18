@@ -5,7 +5,7 @@
 @use 'content.scss' as content;
 
 @use '../pages/hamburguer/hamburguer.scss' as *;
-@use '../pages/hot-dog/hot-dog.scss' as *;
+@use '../pages/tapioca/tapioca.scss' as *;
 @use '../pages/acai/acai.scss' as *;
 @use '../pages/landing/landing.scss' as *;
 @use '../pages/cards/cards.scss' as *;
@@ -14,7 +14,8 @@
 @use '../modules/header/header.scss' as header;
 @use '../modules/footer/footer.scss' as footer;
 @use '../modules/clickable-cards/clickable.scss' as clickableCards;
-
+@use '../modules/heart-generator/heart-generator.scss' as heartGenerator;
+@use '../styles/animations/heart-beat.scss' as heartBeat;
 
 body {
   font-family: 'PT Sans', sans-serif;
