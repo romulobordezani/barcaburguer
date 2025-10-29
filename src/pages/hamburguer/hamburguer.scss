@@ -11,9 +11,11 @@
     align-items: center;
   } */
 
-   scroll-snap-type: none;
-   scroll-snap-align: end;
-   height: 100vh;
+   @include desktop() {
+    scroll-snap-type: none;
+    scroll-snap-align: end;
+    
+   }
 
   .left-display {
     display: flex;
