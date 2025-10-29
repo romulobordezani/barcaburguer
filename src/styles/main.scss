@@ -25,6 +25,7 @@ body {
   font-size: 12px;
   line-height: 1.5;
   overflow: hidden;
+  background-color: var(--bg-black);
 
   @include desktop() {
     font-size: 1vw;

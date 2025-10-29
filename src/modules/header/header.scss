@@ -13,12 +13,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, #333333ed 60%, rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, #1a1a1a 60%, rgba(0, 0, 0, 0));
   padding: 15px;
 
   @include desktop() {
     height: $header-height;
-    background: linear-gradient(to bottom, #333333, rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, #1a1a1a, rgba(0, 0, 0, 0));
     padding: 25px;
   }
 

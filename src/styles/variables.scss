@@ -8,14 +8,28 @@ $header-height-desktop: 150px;
 $header-height: $header-height-desktop - 60px;
 $footer-height: 50px;
 
-$bg-black: rgba(0, 0, 0, 0.77);
+$bg-black: rgba(0, 0, 0, 0.903);
 $card-black: #313131;
 $white: #f6f6f6;
-$black: #333333;
-$discret-black: #666666;
+$black: #1a1a1a;
+$discret-black: #666666; 
 $bb_grey: #999999;
 $bb_purple: #7f3f98;
 $bb_green: #9ccb3c;
 $bb_orange: #ff7a00;
 $bb_pink: #f7038d;
 $bb_red: #bd0222;
+
+:root {
+  --bg-black: #{$bg-black};
+  --card-black: #{$card-black};
+  --white: #{$white};
+  --black: #{$black};
+  --discret-black: #{$discret-black};
+  --bb-grey: #{$bb_grey};
+  --bb-purple: #{$bb_purple};
+  --bb-green: #{$bb_green};
+  --bb-orange: #{$bb_orange};
+  --bb-pink: #{$bb_pink};
+  --bb-red: #{$bb_red};
+}

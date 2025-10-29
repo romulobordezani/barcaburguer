@@ -46,6 +46,7 @@
       
       justify-content: space-around;
       align-items: center;
+      padding: 5%;
 
       @include desktop() {
         flex-direction: row;
@@ -83,6 +84,7 @@
           align-items: start;
           width: 50%;
           order: 2;
+          padding-left: 5%;
         }
   
         .text, .description {
