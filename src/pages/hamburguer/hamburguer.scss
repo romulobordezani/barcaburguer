@@ -102,6 +102,10 @@ $item-size: 253px;
           0 16px 32px rgba(0, 0, 0, 0.3),
           0 24px 48px rgba(0, 0, 0, 0.4);
 
+        @include desktop() {
+          width: 520px;
+        }
+
         &::backdrop {
           background-image: linear-gradient(
             45deg,
@@ -152,6 +156,7 @@ $item-size: 253px;
 
             @include desktop() {
               width: 500px;
+              background-size: 60%;
             }
 
             

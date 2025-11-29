@@ -1,7 +1,7 @@
 // Hide pre-loader after 2 seconds
 document.addEventListener('DOMContentLoaded', function () {
 
-  const timer = (location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 0 : 6000;
+  const timer = (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname === '192.168.3.70') ? 0 : 6000;
   
   setTimeout(function () {
     const preLoader = document.getElementById('main-pre-loader-wrapper');

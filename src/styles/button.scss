@@ -1,12 +1,12 @@
 @use './variables' as *;
 
-button {
+.button-pink {
   /* Variables */
   --button_radius: 0.5em;
   --button_color: #ea0ab2;
   --button_outline_color: #81036e;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.12rem;
+  font-weight: 300;
   border: none;
   cursor: pointer;
   border-radius: var(--button_radius);
@@ -16,6 +16,7 @@ button {
   text-align: center;
   text-transform: uppercase;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .button_top {
@@ -32,10 +33,20 @@ button {
   word-spacing: 0.2em;
 }
 
-button:hover .button_top {
+.button-pink:hover .button_top {
   transform: translateY(-0.39em);
 }
 
-button:active .button_top {
+.button-pink:active .button_top {
   transform: translateY(0);
+}
+
+.button-green {
+  --button_color: #9ccb3c;
+  --button_outline_color: #69882b;
+  @extend .button-pink;
+
+  .button_top {
+    color: #417600;
+  }
 }

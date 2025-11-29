@@ -19,6 +19,55 @@
       background-position-x: unset;
     }
 
+    .button-wrapper {
+      padding: 1.2rem;
+      color: $black;
+      font-weight: bolder;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 50px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      gap: 20px;
+
+      @include desktop() {
+        margin-bottom: 0;
+        padding: 0 350px
+      }
+
+      #button-scroll-down-burger {
+        align-self: flex-start;
+        .button_top {
+          img {
+            width: auto;
+            height: 20px;
+            margin-left: -0.3em;
+            margin-top: -6px;
+            vertical-align: middle;
+            filter:  hue-rotate(90deg) contrast(0.23) brightness(0.8) ;
+            opacity: 0.8;
+          }
+        }
+      }
+
+      #button-scroll-down-acai {
+        .button_top {
+          img {
+            width: auto;
+            height: 20px;
+            margin-left: -0.3em;
+            margin-top: -6px;
+            vertical-align: middle;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
     .right-display {
       width: 100%;
       height: 100%;
@@ -36,32 +85,9 @@
         justify-content: center;
       }
 
-      .button-wrapper {
-        padding: 1.2rem;
-        color: $black;
-        font-weight: bolder;
-        text-align: center;
-        width: max-content;
-        margin-bottom: 50px;
+      
 
-        @include desktop() {
-          margin-bottom: 0;
-        }
-
-        #button-scroll-down {
-          .button_top {
-            img {
-              width: auto;
-              height: 20px;
-              margin-left: -0.3em;
-              margin-top: -6px;
-              vertical-align: middle;
-              filter: brightness(0) invert(1);
-              opacity: 0.8;
-            }
-          }
-        }
-      }
+      
     }    
   }
 }

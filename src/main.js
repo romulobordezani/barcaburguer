@@ -2,6 +2,7 @@ import './modules/preloader';
 import './modules/clickable-cards';
 import './modules/header';
 import './pages/hamburguer';
+import './pages/landing';
 import { generateRandomHearts } from './modules/heart-generator';
 
 generateRandomHearts('post-burger');
