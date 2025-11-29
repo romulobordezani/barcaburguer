@@ -5,144 +5,212 @@
 $item-size: 253px;
 
 #post-burger {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   .wrapper {
     display: flex;
     gap: 5%;
+    row-gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: $res-full-hd;
+    align-self: center;
+    flex-direction: row;  
 
     @include desktop() {
       padding-left: 0;
-      gap: 10%;
-    }
-  }
-
-  .item {
-    flex: 0 0 auto;
-    background-repeat: no-repeat;
-    background-size: 80% auto;
-    background-position-x: 50px;
-    background-position-y: center;
-    width: $item-size;
-    height: $item-size;
-    transition: height 0.3s ease-in-out;
-    background-color: $card-black;
-    border-radius: 10px;
-    border: 1px solid $card-black;
-    cursor: pointer;
-
-    &:hover{
-      -webkit-animation-name: jello;
-      -moz-animation-name: jello;
-      -ms-animation-name: jello;
-      -o-animation-name: jello;
-      animation-name: jello;
-      -webkit-animation-duration: 1s;
-      -moz-animation-duration: 1s;
-      -ms-animation-duration: 1s;
-      -o-animation-duration: 1s;
-      animation-duration: 1s;
+      gap: 30px;
+      row-gap: 40px;
     }
 
-    .item-title {
-      color: $bb_grey;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-align: center;      
-      background-color: #202020;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      transform-origin: center;
-      transform-box: fill-box;
-      height: $item-size;
-      padding: 10px;
-      border-radius: 0 10px 10px 0;
-      text-transform: uppercase;
-      word-spacing: 0.3em;
-      letter-spacing: 0.05em;
-    }
-
-    .item-overlay {
+    .item {
       position: relative;
-      width: 100%;
-      height: 0;
-      margin: 0 auto;
-      opacity: 0;
-      color: $black;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-align: center;
-      line-height: 1.5;
-      
-      padding: 10%;
-      visibility: hidden;
-      font-size: 0.9rem;
+      display: flex;
+      flex: 0 0 auto;
+      width: $item-size;
+      height: $item-size;
       transition: height 0.3s ease-in-out;
+      background-color: $card-black;
+      border-radius: 10px;
+      border: 1px solid $card-black;
+  
+      .item-title {
+        color: $bb_grey;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;      
+        background-color: #202020;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        transform-origin: center;
+        transform-box: fill-box;
+        height: $item-size;
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+        text-transform: uppercase;
+        word-spacing: 0.3em;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+      }
+  
+      .item-img {
+        width: $item-size;
+        height: $item-size;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: center;
+        
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-tap-highlight-color: transparent;
 
-      &--active {
-        opacity: 1;
-        visibility: visible;
-        padding-top: 250px;
-        height: 500px;
-        transition: height 0.3s ease-in-out;
+        &:hover{
+          -webkit-animation-name: jello;
+          -moz-animation-name: jello;
+          -ms-animation-name: jello;
+          -o-animation-name: jello;
+          animation-name: jello;
+          -webkit-animation-duration: 1s;
+          -moz-animation-duration: 1s;
+          -ms-animation-duration: 1s;
+          -o-animation-duration: 1s;
+          animation-duration: 1s;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      dialog {
+        background-color: $card-black;
+        border-radius: 10px;
+        border: 1px solid $card-black;
+        color: $white;
+        width: 90%;
+        box-shadow: 
+          0 2px 4px rgba(0, 0, 0, 0.1),
+          0 8px 16px rgba(0, 0, 0, 0.2),
+          0 16px 32px rgba(0, 0, 0, 0.3),
+          0 24px 48px rgba(0, 0, 0, 0.4);
+
+        &::backdrop {
+          background-image: linear-gradient(
+            45deg,
+            $bb_green,
+            $bb_purple,
+            $bb_orange,
+            $bb_green
+          );
+          opacity: 0.9;
+        }
+  
+        .close-modal-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: #383838; 
+          color: $bb_grey;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-align: center;
+        }
+  
+        .modal-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+  
+          p {
+            font-size: 1.2em;
+            font-weight: 400;
+            text-align: left;
+            padding: 0 20px;
+          }
+  
+          .item-img {
+            cursor: default;
+            width: 300px;
+            background-size: 90%;
+
+            @include desktop() {
+              width: 500px;
+            }
+
+            
+            &:hover{
+              animation: none;
+            }
+          }
+        }
+  
+        
       }
     }
-
-    &--active {
-      background-color: $white;
-      height: 450px;
-      transition: height 0.3s ease-in-out;
-      border: 1px solid $white;
-      border-radius: 10px;
+  
+    .burger-item-1 .item-img {
+      background-image: url('/images/home/burgers/burger-1.png');
     }
-  }
-
-  .burger-item-1 {
-    background-image: url('/images/home/burgers/burger-1.png');
-  }
-
-  .burger-item-2 {
-    background-image: url('/images/home/burgers/burger-2.png');
-  }
-
-  .burger-item-3 {
-    background-image: url('/images/home/burgers/burger-3.png');
-  }
-
-  .burger-item-4 {
-    background-image: url('/images/home/burgers/burger-4.png');
-  }
-
-  .burger-item-5 {
-    background-image: url('/images/home/burgers/burger-5.png');
-  }
-
-  .burger-item-6 {
-    background-image: url('/images/home/burgers/burger-6.png');
-  }
-
-  .burger-item-7 {
-    background-image: url('/images/home/burgers/burger-7.png');
-  }
-
-  .burger-item-8 {
-    background-image: url('/images/home/burgers/burger-8.png');
-  }
-
-  .burger-item-9 {
-    background-image: url('/images/home/burgers/burger-9.png');
-  }
-
-  .burger-item-10 {
-    background-image: url('/images/home/burgers/burger-10.png');
-  }
-
-  .burger-item-11 {
-    background-image: url('/images/home/burgers/burger-11.png'); 
-  }
-
-  .burger-item-12 {
-    background-image: url('/images/home/burgers/burger-12.png');
+  
+    .burger-item-2 .item-img {
+      background-image: url('/images/home/burgers/burger-2.png');
+    }
+  
+    .burger-item-3 .item-img {
+      background-image: url('/images/home/burgers/burger-3.png');
+    }
+  
+    .burger-item-4 .item-img {
+      background-image: url('/images/home/burgers/burger-4.png');
+    }
+  
+    .burger-item-5 .item-img {
+      background-image: url('/images/home/burgers/burger-5.png');
+    }
+  
+    .burger-item-6 .item-img {
+      background-image: url('/images/home/burgers/burger-6.png');
+    }
+  
+    .burger-item-7 .item-img {
+      background-image: url('/images/home/burgers/burger-7.png');
+    }
+  
+    .burger-item-8 .item-img {
+      background-image: url('/images/home/burgers/burger-8.png');
+    }
+  
+    .burger-item-9 .item-img {
+      background-image: url('/images/home/burgers/burger-9.png');
+    }
+  
+    .burger-item-10 .item-img {
+      background-image: url('/images/home/burgers/burger-10.png');
+    }
+  
+    .burger-item-11 .item-img {
+      background-image: url('/images/home/burgers/burger-11.png'); 
+    }
+  
+    .burger-item-12 .item-img {
+      background-image: url('/images/home/burgers/burger-12.png');
+    }
   }
 }

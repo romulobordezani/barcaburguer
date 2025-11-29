@@ -18,7 +18,7 @@ tippy('.sprite', {
   trigger: "click" 
 }); */
 
-// Toggle burger sprite overlay on click
+/* // Toggle burger sprite overlay on click
 document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.item');
   
@@ -27,7 +27,67 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('item--active');
       const overlay = item.querySelector('.item-overlay');
       overlay.classList.toggle('item-overlay--active');
+      const backdrop = item.querySelector('::before');
+      backdrop.classList.toggle('backdrop--active');
+    });
+  });
+}); */
+
+/* const dialog = document.createElement('dialog');
+const item = document.querySelectorAll('.item')[0];
+dialog.append(item);
+document.body.append(dialog);
+
+dialog.addEvenListener('close', 
+  ({ target }) => target.remove()
+);
+
+dialog.showModal(); */
+
+/* const dialog = document.querySelector("dialog");
+const closeButton = document.querySelector("dialog button");
+
+
+
+dialog.addEventListener("click", onClick);
+
+dialog.showModal();
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+dialog.addEvenListener('close', 
+  ({ target }) => target.remove()
+); */
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.item');
+  
+  items.forEach(item => {
+    const dialog = item.querySelector('dialog');
+    const closeButton = item.querySelector("dialog button");
+
+    if (dialog) {
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+          event.target.close();
+        }
+      });
+    }
+
+    item.querySelector('.item-img').addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    item.querySelector('.item-title').addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    closeButton.addEventListener('click', () => {
+      dialog.close();
     });
   });
 });
-

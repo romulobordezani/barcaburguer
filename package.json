@@ -9,7 +9,7 @@
   "scripts": {
     "start": "live-server .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "live:build": "vite build && live-server docs"
   },
