@@ -2,49 +2,35 @@
 @use '../../styles/animations/jello.scss' as *;
 @use '../../styles/mixins/responsiveness.scss' as *;
 
+$item-size: 253px;
+
 #post-burger {
   
-  /* @include desktop() {
-    flex-direction: row;
-    scroll-snap-align: center;
-    height: 100%;
-    align-items: center;
-  } */
-
-   @include desktop() {
-    scroll-snap-type: none;
-    scroll-snap-align: end;
-    
-   }
-
-  .left-display {
+  .wrapper {
     display: flex;
     gap: 5%;
     flex-wrap: wrap;
     justify-content: center;
-    
-    background-repeat: no-repeat;
-    background-size: contain;
-    align-items: anchor-center;
 
     @include desktop() {
       padding-left: 0;
-      gap: 2%;
-      background-image: radial-gradient(ellipse at center, $black 0%, rgba(0,0,0,0) 80%);
+      gap: 10%;
     }
-
-    
   }
 
-  .sprite {
+  .item {
     flex: 0 0 auto;
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top;
-    width: 253px;
-    height: 253px;
+    background-size: 80% auto;
+    background-position-x: 50px;
+    background-position-y: center;
+    width: $item-size;
+    height: $item-size;
     transition: height 0.3s ease-in-out;
-    
+    background-color: $card-black;
+    border-radius: 10px;
+    border: 1px solid $card-black;
+    cursor: pointer;
 
     &:hover{
       -webkit-animation-name: jello;
@@ -59,8 +45,25 @@
       animation-duration: 1s;
     }
 
-    .burger-sprite-overlay {
-      
+    .item-title {
+      color: $bb_grey;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;      
+      background-color: #202020;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      transform-origin: center;
+      transform-box: fill-box;
+      height: $item-size;
+      padding: 10px;
+      border-radius: 0 10px 10px 0;
+      text-transform: uppercase;
+      word-spacing: 0.3em;
+      letter-spacing: 0.05em;
+    }
+
+    .item-overlay {
       position: relative;
       width: 100%;
       height: 0;
@@ -71,7 +74,6 @@
       font-weight: bold;
       text-align: center;
       line-height: 1.5;
-    
       
       padding: 10%;
       visibility: hidden;
@@ -96,51 +98,51 @@
     }
   }
 
-  .burger-sprite-1 {
+  .burger-item-1 {
     background-image: url('/images/home/burgers/burger-1.png');
   }
 
-  .burger-sprite-2 {
+  .burger-item-2 {
     background-image: url('/images/home/burgers/burger-2.png');
   }
 
-  .burger-sprite-3 {
+  .burger-item-3 {
     background-image: url('/images/home/burgers/burger-3.png');
   }
 
-  .burger-sprite-4 {
+  .burger-item-4 {
     background-image: url('/images/home/burgers/burger-4.png');
   }
 
-  .burger-sprite-5 {
+  .burger-item-5 {
     background-image: url('/images/home/burgers/burger-5.png');
   }
 
-  .burger-sprite-6 {
+  .burger-item-6 {
     background-image: url('/images/home/burgers/burger-6.png');
   }
 
-  .burger-sprite-7 {
+  .burger-item-7 {
     background-image: url('/images/home/burgers/burger-7.png');
   }
 
-  .burger-sprite-8 {
+  .burger-item-8 {
     background-image: url('/images/home/burgers/burger-8.png');
   }
 
-  .burger-sprite-9 {
+  .burger-item-9 {
     background-image: url('/images/home/burgers/burger-9.png');
   }
 
-  .burger-sprite-10 {
+  .burger-item-10 {
     background-image: url('/images/home/burgers/burger-10.png');
   }
 
-  .burger-sprite-11 {
+  .burger-item-11 {
     background-image: url('/images/home/burgers/burger-11.png'); 
   }
 
-  .burger-sprite-12 {
+  .burger-item-12 {
     background-image: url('/images/home/burgers/burger-12.png');
   }
 }

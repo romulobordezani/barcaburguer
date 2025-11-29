@@ -20,14 +20,13 @@ tippy('.sprite', {
 
 // Toggle burger sprite overlay on click
 document.addEventListener('DOMContentLoaded', () => {
-  const sprites = document.querySelectorAll('.sprite');
+  const items = document.querySelectorAll('.item');
   
-  sprites.forEach(sprite => {
-    
-    sprite.addEventListener('click', () => {
-      sprite.classList.toggle('sprite--active');
-      const overlay = sprite.querySelector('.burger-sprite-overlay');
-      overlay.classList.toggle('burger-sprite-overlay--active');
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('item--active');
+      const overlay = item.querySelector('.item-overlay');
+      overlay.classList.toggle('item-overlay--active');
     });
   });
 });

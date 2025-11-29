@@ -46,7 +46,7 @@
       
       justify-content: space-around;
       align-items: center;
-      padding: 5%;
+      padding: $header-height + 50px 20px;
 
       @include desktop() {
         flex-direction: row;
