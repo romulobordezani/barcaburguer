@@ -65,8 +65,8 @@
 
   <meta name="facebook-domain-verification" content="tnfldgzwbigs70l0tdh9f7a99cmx2w" />
   <!-- End Facebook Pixel Code -->
-  <script type="module" crossorigin src="/barcaburguer/assets/index-BrYexrHR.js"></script>
-  <link rel="stylesheet" crossorigin href="/barcaburguer/assets/index-CPY97NB-.css">
+  <script type="module" crossorigin src="/barcaburguer/assets/index-C0ivBZHY.js"></script>
+  <link rel="stylesheet" crossorigin href="/barcaburguer/assets/index-lq1fGm7s.css">
 </head>
 
 <body id="bb-body" class="loading">
@@ -355,64 +355,95 @@
         </div>
       </div>
     </div>    <header class="header">
-      <div class="header__logo no-select">
+      <div class="header__logo no-select" onclick="scrollLink('#post-landing')">
         <img src="/barcaburguer/images/uis/logo-barca-burguer.svg" alt="Barca Burguer" />
       </div>
     
-      <div class="header__social no-select">
-        <div class="insta-page">
-          <a href="https://www.instagram.com/barcaburguersp/" target="_BLANK" rel="noopener noreferrer">
-            <img src="/barcaburguer/images/socials/ico_instagram.svg" />
-          </a>
-        </div>
-    
-        <div class="fb-page">
-          <div class="fb-page__logo">
-            <a href="https://www.facebook.com/abarcaburguer" target="_BLANK" rel="noopener noreferrer">
-              <img src="/barcaburguer/images/socials/ico_facebook.svg" />
+      <div class="header__actions">
+        <div class="header__actions__social no-select">
+          <div class="insta-page">
+            <a href="https://www.instagram.com/barcaburguersp/" target="_BLANK" rel="noopener noreferrer">
+              <img src="/barcaburguer/images/socials/ico_instagram.svg" />
             </a>
           </div>
+      
+          <div class="fb-page">
+            <div class="fb-page__logo">
+              <a href="https://www.facebook.com/abarcaburguer" target="_BLANK" rel="noopener noreferrer">
+                <img src="/barcaburguer/images/socials/ico_facebook.svg" />
+              </a>
+            </div>
+      
+            <div class="fb-like fb-page__like" data-href="https://www.facebook.com/abarcaburguer"
+              data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+            </div>
+          </div>
+        </div>
     
-          <div class="fb-like fb-page__like" data-href="https://www.facebook.com/abarcaburguer"
-            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+        <div class="header__actions__side-nav">
+          <button class="sidenav__hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          
+          <nav class="sidenav__sidenav">
+            <div class="sidenav-content">
+              <button class="sidenav__close" aria-label="Close menu">&times;</button>
+              <ul class="sidenav__menu">
+                <li>
+                  <a href="#post-landing">
+                    <img src="/barcaburguer/images/side-nav/home.svg" alt="Hambúrgueres" />Home</a>
+                </li>
+                <li>
+                  <a href="#post-burger">
+                  <img src="/barcaburguer/images/side-nav/hamburguer.svg" alt="Hambúrgueres" />Hambúrgueres</a>
+                </li>
+                <li>
+                  <a href="#post-tapioca">
+                    <img src="/barcaburguer/images/side-nav/tapioca.svg" alt="Tapiocas" />Tapiocas</a>
+                </li>
+                <li>
+                  <a href="#post-acai">
+                    <img src="/barcaburguer/images/side-nav/acai.svg" alt="Açaís" />Açaís e Doces</a>
+                </li>
+                <li>
+                  <a href="#post-cards">
+                    <img src="/barcaburguer/images/side-nav/delivery.svg" alt="Delivery" />Delivery</a>
+                </li>
+                <li>
+                  <a href="#post-about">
+                    <img src="/barcaburguer/images/side-nav/about.svg" alt="Sobre Nós" />Sobre Nós</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          
+          <div class="sidenav__overlay"></div>    </div>
+      </div>
+    </header>    <div class="content">
+      <div id="post-tapioca" class="post no-select">
+        <div class="bg"></div>
+        <div class="wrapper">
+          <div class="left-display"></div>
+          <div class="right-display">
+            <div class="text title title-orange noselect">Tapiocas doces e salgadas,</div>
+            <div class="text description noselect">em muitas opções.</div>
           </div>
         </div>
       </div>
-    
-      <button class="header__hamburger" aria-label="Toggle menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    
-      <nav class="header__sidenav">
-        <div class="sidenav-content">
-          <button class="sidenav__close" aria-label="Close menu">&times;</button>
-          <ul class="sidenav__menu">
-            <li><a href="#post-landing">Home</a></li>
-            <li><a href="#post-burger">Hambúrgueres</a></li>
-            <li><a href="#post-tapioca">Tapiocas</a></li>
-            <li><a href="#post-acai">Açaís</a></li>
-            <li><a href="#post-cards">Delivery</a></li>
-            <li><a href="#post-about">Sobre Nós</a></li>
-          </ul>
-        </div>
-      </nav>
-    
-      <div class="header__overlay"></div>
-    </header>    <div class="content">
       <div id="post-landing" class="post no-select">
         <div class="bg"></div>
         <div class="wrapper">
           <div class="button-wrapper">
       
-            <button class="button-green" id="button-scroll-down-burger">
+            <button class="button-green" id="button-scroll-down-burger" onclick="scrollLink('#post-burger')">
               <div class="button_top"> Lanches
                 <img src="/barcaburguer/images/home/down-arrow-going-down.gif" alt="Lista de Hambúrgueres" />
               </div>
             </button>
       
-            <button class="button-pink" id="button-scroll-down-acai">
+            <button class="button-pink" id="button-scroll-down-acai" onclick="scrollLink('#post-acai')">
               <div class="button_top"> Açaís
                 <img src="/barcaburguer/images/home/down-arrow-going-down.gif" alt="Lista de Açaís" />
               </div>
@@ -430,7 +461,8 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
-                <p>Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate.</p>
+                <div class="item-title-dialog">X Salada</div>
+                <p>Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate. Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate.</p>
               </div>
             </dialog>
           </div>
@@ -442,6 +474,7 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Chapa quente</div>
                 <p>Pão de hambúrguer na chapa com manteiga, hambúrguer artesanal 90g, queijo mussarela, queijo cheddar, ketchup, maionese e bacon.</p>
               </div>
             </dialog>
@@ -454,6 +487,7 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Carne e Bacon</div>
                 <p>Pão, hambúrguer de carne artesanal 90g, queijo, alface americana, bacon, maionese temperada, ketchup e barbecue.</p>
               </div>
             </dialog>
@@ -466,6 +500,7 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Frango</div>
                 <p>Pão, hambúrguer de frango 90g, queijo mussarela, alface americana, tomate, bacon, cebola agridoce, maionese temperada, ketchup e barbecue.</p>
               </div>
             </dialog>
@@ -478,6 +513,7 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Pernil</div>
               <p>Pão, maionese temperada, ketchup, 90g de carne, queijo mussarela, alface americana e tomate.</p>
               </div>
             </dialog>
@@ -490,6 +526,7 @@
               <button class="close-modal-button">X</button>  
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Egg</div>
               <p>Pão, hambúrguer de carne 90g com bacon + ovo, queijo mussarela, alface americana, tomate, bacon, maionese temperada.</p>
               </div>
             </dialog>
@@ -502,6 +539,7 @@
               <button class="close-modal-button">X</button>  
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Melaço Mexicano</div>
                 <p>Pão de hambúrguer, maionese, hambúrguer de carne bovina 90g, melaço mexicano, alface americana, queijo cheddar, tomate e cebola.</p>
               </div>
             </dialog>
@@ -514,6 +552,7 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Caipira de Minas</div>
                 <p>Pão, molho da casa, ovo, milho, 100g carne bovina, queijo mussarela, alface, tomate.</p>
               </div>
             </dialog>
@@ -525,7 +564,8 @@
             <dialog>
               <button class="close-modal-button">X</button>  
               <div class="modal-content">
-                <div class="item-img"></div>
+                <div class="item-img"></div>  
+                <div class="item-title">Camarão 4 queijos</div>
                 <p>Pão de hambúrguer, maionese, hambúrguer de carne bovina 90g, 100g de camarão ao molho 4 queijos, alho frito, brócolis.</p>
               </div>
             </dialog>
@@ -537,7 +577,8 @@
             <dialog>
               <button class="close-modal-button">X</button>
               <div class="modal-content">
-                <div class="item-img"></div>
+                <div class="item-img"></div>  
+                <div class="item-title">Tomate e ervas</div>
                 <p>Pão, maionese temperada, hambúrguer artesanal 90g, molho 4 queijos, tomates cereja marinado no azeite com ervas finas.</p>
               </div>
             </dialog>
@@ -550,6 +591,7 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Frango empanado</div>
               <p>Pão, sobrecoxa de frango empanada e frita, queijo mussarela, cheddar, bacon, maionese temperada e ketchup.</p>
               </div>
             </dialog>
@@ -562,21 +604,13 @@
               <button class="close-modal-button">X</button>
               <div class="modal-content">
                 <div class="item-img"></div>
+                <div class="item-title-dialog">Duplo Cheddar</div>
                 <p>Pão, molho da casa, hambúrguer 100g (sendo 2 unidades de carne bovina), bacon e muitoooo cheddar.</p>
               </div>
             </dialog>
           </div>
         </div>
-      </div>      <div id="post-tapioca" class="post no-select">
-        <div class="bg"></div>
-        <div class="wrapper">
-          <div class="left-display"></div>
-          <div class="right-display">
-            <div class="text title title-orange noselect">Tapiocas doces e salgadas,</div>
-            <div class="text description noselect">em muitas opções.</div>
-          </div>
-        </div>
-      </div>
+      </div>      
       <div id="post-acai" class="post no-select">
         <div class="bg"></div>
         <div class="wrapper">

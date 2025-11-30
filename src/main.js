@@ -3,7 +3,9 @@ import './modules/clickable-cards';
 import './modules/header';
 import './pages/hamburguer';
 import './pages/landing';
+import './modules/side-nav';
 import { generateRandomHearts } from './modules/heart-generator';
+import scrollLink from './modules/scroll-link';
 
 generateRandomHearts('post-burger');
 generateRandomHearts('post-acai');
@@ -19,3 +21,5 @@ window.addEventListener('resize', () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(generateRandomHearts, 500);
 });
+
+window.scrollLink = scrollLink;

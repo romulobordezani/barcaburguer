@@ -10,10 +10,11 @@
   z-index: 150;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, #1a1a1a 60%, rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, #1a1a1a, rgba(0, 0, 0, 0));
   padding: 15px;
 
   @include desktop() {
@@ -23,8 +24,12 @@
   }
 
   &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 140px;
-    height: auto;
+    height: 100%;
+    cursor: pointer;
 
     img {
       width: 80%;
@@ -32,225 +37,136 @@
     }
 
     @include desktop() {
-      width: 100px;
-      height: 70px;
+      width: 150px;
+      margin-top: 20px;
+
+      img {
+        width: 70%;
+        height: auto;
+      }
     }
 
     @include large_desktop() {
-      width: 220px;
-      height: 110px;
+      width: 200px;
+      margin-top: 20px;
     }
   }
 
-  &__social {
+  &__actions {
     display: flex;
-    gap: 10px;
-    justify-content: space-around;
-    align-items: self-start;
-    width: auto;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin-top: -20px;
 
-    @media screen and (min-width: 3000px) {
-      align-items: normal;
-    }
-
-    .insta-page {
-      width: 22px;
-      height: 22px;
-
-      @include large_desktop() {
-        width: 28px;
-        height: 28px;
-      }
-
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-
-        transition: filter 0.3s ease, transform 0.3s ease;
-        filter: brightness(1) contrast(1);
-
-        &:hover {
-          filter: brightness(0.5) contrast(1.1);
-          transform: translateY(-3px);
-        }
-      }
-    }
-
-    .fb-page {
+    &__social {
       display: flex;
-
-      &__logo {
+      gap: 10px;
+      justify-content: space-around;
+      align-items: self-start;
+      width: auto;
+      position: relative;
+  
+      @media screen and (min-width: 3000px) {
+        align-items: normal;
+      }
+  
+      .insta-page {
         width: 22px;
         height: 22px;
-
+        margin-right: 10px;
+  
         @include large_desktop() {
           width: 28px;
           height: 28px;
         }
-        
-
+  
         a {
           display: block;
           width: 100%;
           height: 100%;
+  
           transition: filter 0.3s ease, transform 0.3s ease;
           filter: brightness(1) contrast(1);
-
+  
           &:hover {
-          filter: brightness(0.5) contrast(1.1);
-          transform: translateY(-3px);
-        }
+            filter: brightness(0.5) contrast(1.1);
+            transform: translateY(-3px);
+          }
         }
       }
-
-      &__like {
-        height: 28px;
-        width: 140px!important;
-        display: none;
-
-        @include desktop() {
-          display: block;
+  
+      .fb-page {
+        display: flex;
+  
+        &__logo {
+          width: 22px;
+          height: 22px;
+  
+          @include large_desktop() {
+            width: 28px;
+            height: 28px;
+          }
+  
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: filter 0.3s ease, transform 0.3s ease;
+            filter: brightness(1) contrast(1);
+  
+            &:hover {
+              filter: brightness(0.5) contrast(1.1);
+              transform: translateY(-3px);
+            }
+          }
         }
-
-        span {
-          color: $white;
-          padding-top: 4px;
-          width: 100px!important;
-          height: 38px!important;
-          vertical-align: middle!important;
-
+  
+        &__like {
+          height: 28px;
+          width: 140px!important;
+          
+          display: none;
+  
           @include desktop() {
-            width: 170px!important;
+            display: block;
+            margin-left: 10px;
           }
+  
+          span {
+            color: $white;
+            padding-top: 4px;
+            width: 100px!important;
+            height: 38px!important;
+            vertical-align: middle!important;
+  
+            @include desktop() {
+              width: 170px!important;
+            }
+          }
+  
         }
-
       }
     }
-  }
 
-  &__hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 200;
-    position: relative;
-
-    @include desktop() {
-      width: 35px;
-      height: 30px;
-    }
-
-    .hamburger-line {
-      width: 100%;
-      height: 3px;
-      background-color: $white;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    &.active {
-      .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 7px);
-      }
-
-      .hamburger-line:nth-child(2) {
-        opacity: 0;
-      }
-
-      .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -8px);
-      }
-    }
-  }
-
-  &__sidenav {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
-    background-color: $bg-black;
-    z-index: 300;
-    transition: right 0.3s ease;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-
-    &.open {
-      right: 0;
-    }
-
-    .sidenav-content {
-      padding: 20px;
-      height: 100%;
+    &__side-nav {
+      width: fit-content;
+      height: fit-content;
       display: flex;
-      flex-direction: column;
-    }
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.303); ;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      margin: 0 0 0 20px;
 
-    .sidenav__close {
-      align-self: flex-end;
-      background: transparent;
-      border: none;
-      color: $white;
-      font-size: 3rem;
-      cursor: pointer;
-      padding: 0;
-      margin-bottom: 30px;
-      line-height: 1;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $bb_green;
+      @include desktop() {
+        margin: 0 0 0 5px;
       }
-    }
-
-    .sidenav__menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        margin-bottom: 20px;
-
-        a {
-          color: $white;
-          text-decoration: none;
-          font-size: 1.5rem;
-          font-weight: 500;
-          display: block;
-          padding: 10px 0;
-          transition: color 0.3s ease, padding-left 0.3s ease;
-
-          &:hover {
-            color: $bb_green;
-            padding-left: 10px;
-          }
-        }
-      }
-    }
-  }
-
-  &__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 250;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-
-    &.active {
-      opacity: 1;
-      visibility: visible;
     }
   }
 }

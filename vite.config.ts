@@ -20,6 +20,7 @@ export default defineConfig(() => {
           resolve(__dirname, 'src/modules/header'),
           resolve(__dirname, 'src/modules/footer'),
           resolve(__dirname, 'src/modules/preloader'),
+          resolve(__dirname, 'src/modules/side-nav'),
           resolve(__dirname, 'src/pages/landing'),
           resolve(__dirname, 'src/pages/hamburguer'),
           resolve(__dirname, 'src/pages/tapioca'),

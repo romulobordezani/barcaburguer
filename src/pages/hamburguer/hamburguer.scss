@@ -17,12 +17,22 @@ $item-size: 253px;
     justify-content: center;
     max-width: $res-full-hd;
     align-self: center;
-    flex-direction: row;  
+    flex-direction: row;
 
     @include desktop() {
       padding-left: 0;
       gap: 30px;
       row-gap: 40px;
+    }
+
+    @include tablet() {
+      gap: 10px;
+      row-gap: 10px;
+    }
+
+    @include old_desktop() {
+      gap: 10px;
+      row-gap: 10px;
     }
 
     .item {
@@ -35,6 +45,16 @@ $item-size: 253px;
       background-color: $card-black;
       border-radius: 10px;
       border: 1px solid $card-black;
+
+      @include tablet() {
+        width: $item-size - 50px;
+        height: $item-size - 50px;
+      }
+
+      @include old_desktop() {
+        width: $item-size - 70px;
+        height: $item-size - 70px;
+      }
   
       .item-title {
         color: $bb_grey;
@@ -53,6 +73,16 @@ $item-size: 253px;
         word-spacing: 0.3em;
         letter-spacing: 0.05em;
         cursor: pointer;
+
+        @include tablet() {
+          height: $item-size - 50px;
+          font-size: 1rem;
+        }
+
+        @include old_desktop() {
+          height: $item-size - 70px;
+          font-size: 0.8rem;
+        }
       }
   
       .item-img {
@@ -88,6 +118,11 @@ $item-size: 253px;
         &:focus {
           outline: none;
         }
+
+        @include tablet() {
+          width: $item-size - 50px;
+          height: $item-size - 50px;
+        }
       }
   
       dialog {
@@ -96,14 +131,23 @@ $item-size: 253px;
         border: 1px solid $card-black;
         color: $white;
         width: 90%;
+        max-width: 720px;
+        padding-bottom: 30px;
         box-shadow: 
           0 2px 4px rgba(0, 0, 0, 0.1),
           0 8px 16px rgba(0, 0, 0, 0.2),
           0 16px 32px rgba(0, 0, 0, 0.3),
           0 24px 48px rgba(0, 0, 0, 0.4);
 
-        @include desktop() {
-          width: 520px;
+        .item-title-dialog {
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-align: center;
+          text-transform: uppercase;
+          word-spacing: 0.3em;
+          letter-spacing: 0.05em;
+          color: $bb_grey;
+          padding: 10px;
         }
 
         &::backdrop {

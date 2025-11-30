@@ -15,7 +15,15 @@
     justify-content: flex-end;
     align-items: center;
 
+
+
     @include desktop() {
+      background-position-x: unset;
+      background-size: cover;
+    }
+
+    @include tablet_landscape() {
+      background-size: contain;
       background-position-x: unset;
     }
 
@@ -35,7 +43,11 @@
 
       @include desktop() {
         margin-bottom: 0;
-        padding: 0 350px
+        padding: 0 350px;
+      }
+
+      @include tablet() {
+        padding: 0 50px;
       }
 
       #button-scroll-down-burger {
@@ -67,27 +79,5 @@
         }
       }
     }
-
-    .right-display {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-direction: column;
-      text-transform: uppercase;
-      text-shadow: none;
-      background-image: none;
-
-      @include desktop() {
-        max-width: 40%;
-        align-items: start;
-        justify-content: center;
-      }
-
-      
-
-      
-    }    
   }
 }

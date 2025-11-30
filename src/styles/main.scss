@@ -12,6 +12,7 @@
 @use '../pages/about/about.scss' as *;
 
 @use '../modules/header/header.scss' as header;
+@use '../modules/side-nav/side-nav.scss' as sideNav;
 @use '../modules/footer/footer.scss' as footer;
 @use '../modules/clickable-cards/clickable.scss' as clickableCards;
 @use '../modules/heart-generator/heart-generator.scss' as heartGenerator;
