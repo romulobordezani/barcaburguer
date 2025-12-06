@@ -15,6 +15,12 @@
         z-index: 200;
         position: relative;
         -webkit-tap-highlight-color: transparent;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }
     
         @include desktop() {
           width: 35px;
@@ -77,9 +83,10 @@
             margin-bottom: 30px;
             line-height: 1;
             transition: color 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover {
-            color: $bb_green;
+                color: $bb_green;
             }
         }
 

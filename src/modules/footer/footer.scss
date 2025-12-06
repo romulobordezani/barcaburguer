@@ -20,6 +20,10 @@
   }
 
   &__copyright {
+    @include handheld() {
+      display: none;
+    }
+    
     margin-bottom: 5px;
 
     &-symbol {

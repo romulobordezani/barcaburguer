@@ -1,6 +1,7 @@
 @use './variables' as *;
+@use './mixins/responsiveness.scss' as *;
 
-.button-pink {
+.button {
   /* Variables */
   --button_radius: 0.5em;
   --button_color: #ea0ab2;
@@ -17,34 +18,61 @@
   text-transform: uppercase;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   -webkit-tap-highlight-color: transparent;
+  transform: scale(0.7);
+
+  @include desktop() {
+    transform: scale(0.85);
+  }
+
+  @include large_desktop() {
+    transform: scale(1);
+  }
+
+  @mixin huge_desktop() {
+    transform: scale(2);
+  }
+
+  .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.5em 0.5em;
+    background: var(--button_color);
+    color: rgb(247, 184, 239);
+    transform: translateY(-0.3em);
+    transition: transform 0.1s ease;
+    font-size: 1.3em;
+    word-spacing: 0.2em;
+  }
+
+  &:hover {
+    .button_top {
+      transform: translateY(-0.39em);
+    }
+  }
+
+  &:active {
+    .button_top {
+      transform: translateY(0);
+    }
+  }
 }
 
-.button_top {
-  display: block;
-  box-sizing: border-box;
-  border: 1px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.5em 0.5em;
-  background: var(--button_color);
-  color: rgb(247, 184, 239);
-  transform: translateY(-0.3em);
-  transition: transform 0.1s ease;
-  font-size: 1.3em;
-  word-spacing: 0.2em;
-}
+.button-pink {
+  --button_color: #ea0ab2;
+  --button_outline_color: #81036e;
+  @extend .button;
 
-.button-pink:hover .button_top {
-  transform: translateY(-0.39em);
-}
-
-.button-pink:active .button_top {
-  transform: translateY(0);
+  .button_top {
+    color: rgb(247, 184, 239);
+  }
 }
 
 .button-green {
   --button_color: #9ccb3c;
   --button_outline_color: #69882b;
-  @extend .button-pink;
+  @extend .button;
 
   .button_top {
     color: #417600;
