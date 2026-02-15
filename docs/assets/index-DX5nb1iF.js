@@ -10,4 +10,4 @@
       z-index: 0;
       ${E}
     `,t.appendChild(d)}}c("post-burger");c("post-acai");c("post-tapioca");c("post-landing");c("post-about");c("post-cards");c("post-bolo");c("post-morango");c("post-fondue");let w;window.addEventListener("resize",()=>{clearTimeout(w),w=setTimeout(c,500)});window.scrollLink=k;
-//# sourceMappingURL=index-ziUvrkXN.js.map
+//# sourceMappingURL=index-DX5nb1iF.js.map

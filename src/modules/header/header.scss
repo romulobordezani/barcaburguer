@@ -19,10 +19,7 @@
   left: 0;
 
   background: linear-gradient(to bottom, #1a1a1a, rgba(0, 0, 0, 0));
-  padding: 15px;
-
-  /* box-shadow: #01aac0 0 0 30px 0 inset; */
-  
+  padding: 15px;  
 
   @include desktop() {
     height: $header-height-desktop;    
@@ -118,6 +115,7 @@
         &__logo {
           width: 22px;
           height: 22px;
+          margin-right: 10px;
   
           @include large_desktop() {
             width: 28px;
@@ -136,31 +134,6 @@
               transform: translateY(-3px);
             }
           }
-        }
-  
-        &__like {
-          height: 28px;
-          width: 140px!important;
-          
-          display: none;
-  
-          @include desktop() {
-            display: block;
-            margin-left: 10px;
-          }
-  
-          span {
-            color: $white;
-            padding-top: 4px;
-            width: 100px!important;
-            height: 38px!important;
-            vertical-align: middle!important;
-  
-            @include desktop() {
-              width: 170px!important;
-            }
-          }
-  
         }
       }
     }
