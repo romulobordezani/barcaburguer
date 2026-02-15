@@ -2,22 +2,52 @@
 @use '../../styles/mixins/responsiveness.scss' as *;
 
 #post-about {
-  height: 100dvh;
-  width: 100%;
-  
+  @include desktop() {
+    height: 100dvh;
+    width: 100%;
+  }
 
   .wrapper {
-    height: calc(100% - $footer-height);
     
+
+    @include desktop() {
+      height: calc(100% - $footer-height);
+    }
 
     .left-display {
       display: flex;
       justify-content: center; 
       align-items: center;
+
+      @include handset_portrait() {
+        height: auto;
+        min-height: unset;
+      }
     }
 
     .right-display {
-      padding-top: $header-height + 30px;      
+      padding-top: $header-height + 30px;
+      
+      @include handset_portrait() {
+        height: auto;
+      }
+
+      .description {
+        font-size: 1.5rem;
+      }
+
+      .thays-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px 0;
+
+        @include desktop() {
+          width: 50%;
+        }
+      }
+
+      
     }
 
   }
