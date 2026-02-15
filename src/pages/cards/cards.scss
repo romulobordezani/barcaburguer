@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  --clickable-count: 5; /* Default count, can be updated by JS */
+  --clickable-count: 4; /* Default count, can be updated by JS */
 
   @include desktop() {
     padding: 3rem;

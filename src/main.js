@@ -13,6 +13,9 @@ generateRandomHearts('post-tapioca');
 generateRandomHearts('post-landing');
 generateRandomHearts('post-about');
 generateRandomHearts('post-cards');
+generateRandomHearts('post-bolo');
+generateRandomHearts('post-morango');
+generateRandomHearts('post-fondue');
 
 // Optional: Regenerate hearts on window resize for responsive layouts
 let resizeTimeout;
