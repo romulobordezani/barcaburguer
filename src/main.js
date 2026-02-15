@@ -26,3 +26,4 @@ window.addEventListener('resize', () => {
 });
 
 window.scrollLink = scrollLink;
+
