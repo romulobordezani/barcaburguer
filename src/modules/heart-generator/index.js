@@ -90,8 +90,8 @@ export function generateRandomHearts(id) {
     
     // Randomly choose between green and purple hearts
     const heartColors = [
-      '/barcaburguer/images/uis/heart-green.svg',
-      '/barcaburguer/images/uis/heart-purple.svg'
+      '/images/uis/heart-green.svg',
+      '/images/uis/heart-purple.svg'
     ];
     heart.src = heartColors[Math.floor(Math.random() * heartColors.length)];
     heart.className = 'random-heart';

@@ -12,7 +12,6 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig(() => {
   return {
-    base: '/barcaburguer/',
     plugins: [
       tsconfigPaths(),
       handlebars({
